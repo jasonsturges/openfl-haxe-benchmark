@@ -7,8 +7,6 @@ Modeled after [Grant Skinner's](http://gskinner.com/blog) ActionScript project [
 
 Executing a batch of tests every 50-milliseconds on a Timer, each iteration runs a defined number of loops for multiple samples.  Overhead is basedlined and removed from the result, and deviation of each iteration is denoted.
 
-[Download the source code at GitHub](https://github.com/jasonsturges/openfl-haxe-performance-test)
-
 #####Example: Event Dispatch Test
 
 In the test suite below, one test has been executed over 4-iterations.
@@ -87,10 +85,10 @@ For example, calculate how much overhead it takes to execute a `for` loop:
 
 To add tests to your test suite, add a subclass of `AbstractTest` to your `tests` array of your test suite.  For example, to call a method on your test suite, use  `MethodTest`:
 
-            tests = [
-                new MethodTest(test1, null, "Test Function 1", 0, 1, "Execute function `test1` from this class"),
-                new MethodTest(test2, null, "Test Function 2", 0, 1, "Execute function `test2` from this class")
-            ];
+        tests = [
+            new MethodTest(test1, null, "Test Function 1", 0, 1, "Execute function `test1` from this class"),
+            new MethodTest(test2, null, "Test Function 2", 0, 1, "Execute function `test2` from this class")
+        ];
 
 Above, two tests are defined that will call `test1()` and `test2()` functions on the test suite.
 
