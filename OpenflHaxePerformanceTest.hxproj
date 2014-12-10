@@ -22,7 +22,7 @@
   <build>
     <option directives="" />
     <option flashStrict="False" />
-    <option mainClass="com.sample.project" />
+    <option mainClass="com.jasonsturges.labs.performance" />
     <option enabledebug="False" />
     <option additional="" />
   </build>

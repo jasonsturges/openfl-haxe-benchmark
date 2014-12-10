@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	
-	<meta title="OpenflHaxePerformanceTest" package="com.sample.project" version="1.0.0" company="Company Name" />
-	<app main="Main" path="Export" file="OpenflHaxePerformanceTest" />
+	<meta title="OpenFlHaxePerformanceTest" package="com.jasonsturges.labs.performance" version="1.0.0" company="Jason Sturges" />
+	<app main="Main" path="Export" file="OpenFlHaxePerformanceTest" />
 	
 	<source path="Source" />
 	
