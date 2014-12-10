@@ -1,0 +1,20 @@
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+## Directory-based project format
+.idea/
+## File-based project format
+*.ipr
+*.iws
+*.iml
+
+# Build and Release Folders
+bin/
+bin-debug/
+bin-release/
+out/
+Export/
+
+# Operating systems
+## Mac OS X
+.DS_Store
+## Windows
+Thumbs.db
