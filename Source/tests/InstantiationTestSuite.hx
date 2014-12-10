@@ -30,7 +30,7 @@ class InstantiationTestSuite extends TestSuite {
         name = "Instantiation Test";
         description = "Instantiation times.";
         initFunction = initialize;
-        tareTest = new MethodTest(tare);
+        baselineTest = new MethodTest(baseline);
         loops = 1000000;
         iterations = 4;
         tests = [
@@ -56,10 +56,10 @@ class InstantiationTestSuite extends TestSuite {
 
 
     //------------------------------
-    //  tare
+    //  baseline
     //------------------------------
 
-    public function tare():Void {
+    public function baseline():Void {
         for (i in 0 ... loops) {
         }
     }

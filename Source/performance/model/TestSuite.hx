@@ -14,9 +14,9 @@ class TestSuite extends EventDispatcher {
     public var tests:Array<AbstractTest>;
     public var name:String;
     public var description:String;
-    public var tareTest:AbstractTest;
+    public var baselineTest:AbstractTest;
     public var initFunction:Dynamic;
-    public var tareTime:Float;
+    public var baselineTime:Float;
     public var initTime:Float;
     public var iterations:UInt;
     public var loops:UInt;
@@ -28,7 +28,7 @@ class TestSuite extends EventDispatcher {
 
     public function new(?tests:Array<AbstractTest>,
                         ?name:String,
-                        ?tareTest:AbstractTest,
+                        ?baselineTest:AbstractTest,
                         ?initFunction:Dynamic,
                         iterations:UInt = 0,
                         ?description:String) {
@@ -37,7 +37,7 @@ class TestSuite extends EventDispatcher {
         this.tests = tests != null ? tests : [];
         this.name = name;
         this.description = description;
-        this.tareTest = tareTest;
+        this.baselineTest = baselineTest;
         this.initFunction = initFunction;
         this.iterations = iterations;
     }

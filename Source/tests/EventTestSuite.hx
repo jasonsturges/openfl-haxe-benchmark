@@ -21,7 +21,7 @@ class EventTestSuite extends TestSuite {
         name = "Event Test";
         description = "Event dispatching operations.";
         initFunction = initialize;
-        tareTest = new MethodTest(tare);
+        baselineTest = new MethodTest(baseline);
         loops = 1000000;
         iterations = 4;
         tests = [
@@ -45,10 +45,10 @@ class EventTestSuite extends TestSuite {
 
 
     //------------------------------
-    //  tare
+    //  baseline
     //------------------------------
 
-    public function tare():Void {
+    public function baseline():Void {
         for (i in 0 ... loops) {
         }
     }

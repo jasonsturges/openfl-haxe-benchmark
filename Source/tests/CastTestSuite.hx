@@ -25,7 +25,7 @@ class CastTestSuite extends TestSuite {
         name = "Cast Test";
         description = "Safe and unsafe casting";
         initFunction = initialize;
-        tareTest = new MethodTest(tare);
+        baselineTest = new MethodTest(baseline);
         loops = 1000000;
         iterations = 4;
         tests = [
@@ -48,10 +48,10 @@ class CastTestSuite extends TestSuite {
 
 
     //------------------------------
-    //  tare
+    //  baseline
     //------------------------------
 
-    public function tare():Void {
+    public function baseline():Void {
         for (i in 0 ... loops) {
         }
     }

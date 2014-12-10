@@ -20,7 +20,7 @@ class FloatTestSuite extends TestSuite {
         name = "Math Test";
         description = "Mathematical operations";
         initFunction = initialize;
-        tareTest = new MethodTest(tare);
+        baselineTest = new MethodTest(baseline);
         loops = 10000000;
         iterations = 4;
         tests = [
@@ -41,10 +41,10 @@ class FloatTestSuite extends TestSuite {
 
 
     //------------------------------
-    //  tare
+    //  baseline
     //------------------------------
 
-    public function tare():Void {
+    public function baseline():Void {
         for (i in 0 ... loops) {
         }
     }

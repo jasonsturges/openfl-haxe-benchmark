@@ -81,9 +81,9 @@ class PerformanceTest extends EventDispatcher {
             if (currentTestSuite.initFunction != null)
                 Reflect.callMethod(currentTestSuite, currentTestSuite.initFunction, []);
 
-            if (currentTestSuite.tareTest != null) {
-                runTareTest();
-                trace("   Tare time: " + currentTestSuite.tareTime);
+            if (currentTestSuite.baselineTest != null) {
+                runBaselineTest();
+                trace("   Baseline time: " + currentTestSuite.baselineTime);
             }
         }
 
@@ -106,9 +106,9 @@ class PerformanceTest extends EventDispatcher {
         }
     }
 
-    private function runTareTest():Void {
-        var tareTest:AbstractTest = currentTestSuite.tareTest;
-        var i:Int = tareTest.iterations == 0 ? 10 : tareTest.iterations;
+    private function runBaselineTest():Void {
+        var baselineTest:AbstractTest = currentTestSuite.baselineTest;
+        var i:Int = baselineTest.iterations == 0 ? 10 : baselineTest.iterations;
         var count:UInt = 0;
         var good:Bool = false;
         var t:Float = -1;
@@ -116,15 +116,15 @@ class PerformanceTest extends EventDispatcher {
 
         while (!good && i-- > 0) {
             count++;
-            t = tareTest.run();
+            t = baselineTest.run();
             if (t < 0)
                 continue;
             var d:Float = Math.abs(t - oldTime);
             good = (oldTime >= 0) && (d / (oldTime + t) * 2 < 0.1 || d < 2);
             oldTime = t;
         }
-        tareTest.iterations = count;
-        currentTestSuite.tareTime = (t < 0 || oldTime < 0) ? -1 : (t + oldTime) / 2;
+        baselineTest.iterations = count;
+        currentTestSuite.baselineTime = (t < 0 || oldTime < 0) ? -1 : (t + oldTime) / 2;
     }
 
     private function runTest(test:AbstractTest):Bool {
@@ -165,7 +165,7 @@ class PerformanceTest extends EventDispatcher {
     }
 
     public function traceTestResult(test:AbstractTest, testSuite:TestSuite):Void {
-        trace("      Result: " + ((test.average - testSuite.tareTime) / testSuite.loops) + "ms per operation");
+        trace("      Result: " + ((test.average - testSuite.baselineTime) / testSuite.loops) + "ms per operation");
     }
 
 }
