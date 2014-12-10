@@ -197,7 +197,7 @@ To execute all tests, call `openfl test` by target, such as:
 
 Executing one of the examples under the `tests` package, here is the result of executing the casting test suite:
 
-{<2>}![casting](http://www.labs.jasonsturges.com/openfl/openfl-haxe-performance-test/casting.png)
+![casting](http://www.labs.jasonsturges.com/openfl/openfl-haxe-performance-test/casting.png)
 
 <table><tbody><tr><td> </td><td>Neko</td><td>Flash</td><td>HTML5</td><td>Mac</td></tr><tr><td>Downcast</td><td>0.000005</td><td>0.000002</td><td>0.000000</td><td>0.000000</td></tr><tr><td>Safe Downcast</td><td>0.000665</td><td>0.000001</td><td>0.000043</td><td>0.000000</td></tr><tr><td>Upcast</td><td>0.000005</td><td>0.000004</td><td>0.000000</td><td>0.000053</td></tr><tr><td>Safe Upcast</td><td>0.000268</td><td>0.000004</td><td>0.000041</td><td>0.000055</td></tr></tbody></table>
 
