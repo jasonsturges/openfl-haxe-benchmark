@@ -196,9 +196,8 @@ To execute all tests, call `openfl test` by target, such as:
     $ openfl test neko
     $ openfl test html5
 
-Executing one of the examples under the `tests` package, here is the result of the casting test suite:
+Executing one of the examples under the `tests` package, here are the results of the instantiation test suite:
 
-![casting](http://www.labs.jasonsturges.com/openfl/openfl-haxe-performance-test/casting.png)
+![casting](http://www.labs.jasonsturges.com/openfl/openfl-haxe-performance-test/instantiation.png)
 
-<table><tbody><tr><td> </td><td>Neko</td><td>Flash</td><td>HTML5</td><td>Mac</td></tr><tr><td>Downcast</td><td>0.000005</td><td>0.000002</td><td>0.000000</td><td>0.000000</td></tr><tr><td>Safe Downcast</td><td>0.000665</td><td>0.000001</td><td>0.000043</td><td>0.000000</td></tr><tr><td>Upcast</td><td>0.000005</td><td>0.000004</td><td>0.000000</td><td>0.000053</td></tr><tr><td>Safe Upcast</td><td>0.000268</td><td>0.000004</td><td>0.000041</td><td>0.000055</td></tr></tbody></table>
-
+<table><tbody><tr><th> </th><th>Neko</th><th>Flash</th><th>HTML5</th><th>Mac</th></tr><tr><td>Point</td><td>0.000836</td><td>0.000151</td><td>0.000010</td><td>0.000022</td></tr><tr><td>Rectangle</td><td>0.001128</td><td>0.000147</td><td>0.000017</td><td>0.000024</td></tr><tr><td>Matrix</td><td>0.001977</td><td>0.000157</td><td>0.000474</td><td>0.000032</td></tr><tr><td>Matrix3D</td><td>0.011458</td><td>0.000188</td><td>0.000073</td><td>0.000196</td></tr><tr><td>Shape</td><td>0.009512</td><td>0.003207</td><td>0.001257</td><td>0.001255</td></tr><tr><td>Sprite</td><td>0.024124</td><td>0.004946</td><td>0.001783</td><td>0.001694</td></tr><tr><td>MovieClip</td><td>0.016538</td><td>0.004790</td><td>0.002333</td><td>0.001620</td></tr><tr><td>Bitmap</td><td>0.013471</td><td>0.007022</td><td>0.002018</td><td>0.002489</td></tr><tr><td>BitmapData</td><td>0.007549</td><td>0.016925</td><td>0.039075</td><td>0.004997</td></tr></tbody></table>
