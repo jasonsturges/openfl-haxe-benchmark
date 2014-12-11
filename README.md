@@ -5,7 +5,7 @@ Test harness to benchmark segments of code.
 
 Modeled after [Grant Skinner's](http://gskinner.com/blog) ActionScript project [PerformanceTest](http://gskinner.com/blog/archives/2010/02/performancetest.html), this variation is designed for OpenFL to benchmark segments of Haxe code.
 
-Executing a batch of tests every 50-milliseconds on a Timer, each iteration runs a defined number of loops for multiple samples.  Overhead is basedlined and removed from the result, and deviation of each iteration is denoted.
+Executing a batch of tests every 50-milliseconds on a Timer, each iteration runs a defined number of loops for multiple samples.  Overhead baseline is removed from the result, and deviation of each iteration is denoted.
 
 #####Example: Event Dispatch Test
 
@@ -23,6 +23,7 @@ In the test suite below, one test has been executed over 4-iterations.
 Each iteration executes the function 10,000,000 for a cumulative total of 40,000,000 calls to the function.  This is configurable per test suite.
 
 Each sample of the four iterations are measured - below we see:
+
 - 1st sample made 10,000,000 function calls in 127ms
 - 2nd sample made 10,000,000 function calls in 125ms
 - 3rd sample made 10,000,000 function calls in 124ms
@@ -30,9 +31,9 @@ Each sample of the four iterations are measured - below we see:
 
 Each iteration displays a running average of total time to execute test, also expressing consistency by calculating deviation.
 
-Finally, after all samples of this test have been run, the result of one function is calculated to take `0.00012525` milliseconds.
+Finally, after all samples of this test have been run, the result of the function call is calculated to take `0.00012525` milliseconds.
 
-In this example, looping the test function incurred immeasureable overhead.  Baseline is calculated and removed from total results to compensate computation time of executing the test loop.
+In this example, looping the test function incurred immeasurable overhead.  Baseline is calculated and removed from total results to compensate computation time of executing the test loop.
 
 
 ##### Creating Test Suites
@@ -44,14 +45,14 @@ Test suites are a collection of multiple tests.  To create a Test Suite, extend 
 
 In your constructor, define properties of the test suite, such as:
 
-- name: Name of this test suite
-- description: Description of the this test suite
-- initFunction: Function to call when this test suite is first executed, to inialize any peroperties of this class
-- baselineTest: Function to measure overhead of looping, or other metrics to remove from total time calculations
-- loops: The number of times each test function should loop when be executed.  In this example, each test will execute 10,000,000 times.
-- iterations: The number of times the test should be run.  In this example, each test will be run 4-times, each time looping 10,000,000 times for a total of 40,000,000 function calls.
+- *name* &mdash; Name of this test suite
+- *description* &mdash; Description of the this test suite
+- *initFunction* &mdash; Function to call before tests of this test suite are executed, to initialize any properties of this class
+- *baselineTest* &mdash; Function to measure overhead of looping, or other metrics to remove from total time calculations
+- *loops* &mdash; Number of times each test function should loop when be executed.  In this example, each test will execute 10,000,000 times
+- *iterations* &mdash; Number of times the test should be run.  In this example, each test will be run 4-times, each time looping 10,000,000 times for a total of 40,000,000 function calls
 
-Constructor:
+Example constructor:
 
         public function new() {
             super();
@@ -66,7 +67,7 @@ Constructor:
             ];
         }
 
-If you test suite has local properties, or other initialization that must be performed before running the test suite, place code inside the initialize function:
+If your test suite has local properties, or other initialization that must be performed before running the test suite, place code inside the initialize function:
 
         public function initialize():Void {
             // Any initialization of the test suite here
@@ -104,11 +105,11 @@ Above, two tests are defined that will call `test1()` and `test2()` functions on
             }
         }
 
-This means your "Test Function 1" test will tested 4-iterations, and each iteration will loop inside the function 10,000,000 times.
+This means your "Test Function 1" test will be tested 4-iterations, and each iteration will loop inside the function 10,000,000 times.
 
 Likewise, exactly the same thing will happen for the second test defined: "Test Function 2".
 
-Alltogether your test suite class should look like:
+Altogether your test suite class should look like:
 
     package tests;
 
@@ -186,7 +187,7 @@ Alltogether your test suite class should look like:
 
 ##### Executing Tests
 
-Currently tests results are traced; therefore, some targets will output results in a terminal whereas targets such as HTML5 will need to inspect the console.
+Currently tests results are traced; therefore, some targets will output results in a terminal whereas targets such as html5 will need to inspect the console.
 
 To execute all tests, call `openfl test` by target, such as:
 
@@ -195,7 +196,7 @@ To execute all tests, call `openfl test` by target, such as:
     $ openfl test neko
     $ openfl test html5
 
-Executing one of the examples under the `tests` package, here is the result of executing the casting test suite:
+Executing one of the examples under the `tests` package, here is the result of the casting test suite:
 
 ![casting](http://www.labs.jasonsturges.com/openfl/openfl-haxe-performance-test/casting.png)
 
