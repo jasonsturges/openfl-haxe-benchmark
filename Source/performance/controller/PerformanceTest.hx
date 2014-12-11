@@ -165,7 +165,7 @@ class PerformanceTest extends EventDispatcher {
     }
 
     public function traceTestResult(test:AbstractTest, testSuite:TestSuite):Void {
-        trace("      Result: " + ((test.average - testSuite.baselineTime) / testSuite.loops) + "ms per operation");
+        trace("      Result: " + ((test.average - testSuite.baselineTime) / testSuite.loops) + " ms per operation");
     }
 
 }
