@@ -7,6 +7,7 @@ import tests.EventTestSuite;
 import tests.FloatTestSuite;
 import tests.FunctionInliningTestSuite;
 import tests.InstantiationTestSuite;
+import tests.LoopTestSuite;
 
 class Main extends Sprite {
 
@@ -29,6 +30,7 @@ class Main extends Sprite {
 		performanceTest.enqueueTestSuite(new CastTestSuite());
 		performanceTest.enqueueTestSuite(new FunctionInliningTestSuite());
 		performanceTest.enqueueTestSuite(new EventTestSuite());
+		performanceTest.enqueueTestSuite(new LoopTestSuite());
 		performanceTest.enqueueTestSuite(new InstantiationTestSuite());
 
 		performanceTest.runAsynchronous();
