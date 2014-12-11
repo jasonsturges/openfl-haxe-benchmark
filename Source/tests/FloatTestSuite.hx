@@ -45,7 +45,9 @@ class FloatTestSuite extends TestSuite {
     //------------------------------
 
     public function baseline():Void {
+        var n = 0.0;
         for (i in 0 ... loops) {
+            n = 0.0;
         }
     }
 
@@ -55,28 +57,30 @@ class FloatTestSuite extends TestSuite {
     //------------------------------
 
     public function addition():Void {
+        var n = 0.0;
         for (i in 0 ... loops) {
-            var n:Float = i + 0.1;
+            n = i + 0.1;
         }
     }
 
     public function subtraction():Void {
+        var n = 0.0;
         for (i in 0 ... loops) {
-            var n:Float = i - 0.1;
+            n = i - 0.1;
         }
     }
 
     public function division():Void {
+        var n = 0.0;
         for (i in 0 ... loops) {
-            var n:Float = i / 1000;
+            n = i / 1000;
         }
     }
 
     public function multiplication():Void {
+        var n = 0.0;
         for (i in 0 ... loops) {
-            var n:Float = i * 0.001;
+            n = i * 0.001;
         }
     }
-
 }
-
