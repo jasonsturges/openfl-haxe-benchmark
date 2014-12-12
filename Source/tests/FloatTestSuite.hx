@@ -73,7 +73,7 @@ class FloatTestSuite extends TestSuite {
     public function division():Void {
         var n = 0.0;
         for (i in 0 ... loops) {
-            n = i / 1000;
+            n = i / 1000.0;
         }
     }
 
