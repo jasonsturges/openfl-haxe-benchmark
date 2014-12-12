@@ -78,7 +78,10 @@ class GraphicsTestSuite extends TestSuite {
     public function drawPath():Void {
         shape.graphics.clear();
         for (i in 0 ... loops) {
+            // TODO: Resolve Flash error: Array<Int> should be flash.Vector<Int>
+            #if !flash
             shape.graphics.drawPath([2], [(i % 100 * 3), (i % 200)]);
+            #end
         }
     }
 
@@ -91,7 +94,10 @@ class GraphicsTestSuite extends TestSuite {
             data.push(i % 100 * 3);
             data.push(i % 200);
         }
+        // TODO: Resolve Flash error: Array<Int> should be flash.Vector<Int>
+        #if !flash
         shape.graphics.drawPath(commands, data);
+        #end
     }
 
 }
