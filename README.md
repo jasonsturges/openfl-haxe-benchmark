@@ -1,8 +1,6 @@
 OpenFL Haxe Performance Test
 ============================
 
-Test harness to benchmark segments of code.
-
 Modeled after [Grant Skinner's](http://gskinner.com/blog) ActionScript project [PerformanceTest](http://gskinner.com/blog/archives/2010/02/performancetest.html), this variation is designed for OpenFL to benchmark segments of Haxe code.
 
 Executing a batch of tests every 50-milliseconds on a Timer, each iteration runs a defined number of loops for multiple samples.  Overhead baseline is removed from the result, and deviation of each iteration is denoted.
