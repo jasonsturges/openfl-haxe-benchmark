@@ -23,7 +23,7 @@ class CastTestSuite extends TestSuite {
         super();
 
         name = "Cast Test";
-        description = "Safe and unsafe casting";
+        description = "Safe and unsafe casting.";
         initFunction = initialize;
         baselineTest = new MethodTest(baseline);
         loops = 1000000;

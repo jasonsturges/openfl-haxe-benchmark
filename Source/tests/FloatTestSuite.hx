@@ -17,8 +17,8 @@ class FloatTestSuite extends TestSuite {
     public function new() {
         super();
 
-        name = "Math Test";
-        description = "Mathematical operations";
+        name = "Float Test";
+        description = "Mathematical operations on `Float` data type.";
         initFunction = initialize;
         baselineTest = new MethodTest(baseline);
         loops = 10000000;

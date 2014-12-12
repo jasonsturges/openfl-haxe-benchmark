@@ -21,8 +21,8 @@ class GraphicsTestSuite extends TestSuite {
     public function new() {
         super();
 
-        name = "Function Inlining Test";
-        description = "Inlining functions using the `inline` keyword.";
+        name = "Graphics Test";
+        description = "Drawing operations using `Graphics` object.";
         initFunction = initialize;
         baselineTest = new MethodTest(baseline);
         loops = 1000000;

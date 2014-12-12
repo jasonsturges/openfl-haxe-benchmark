@@ -17,8 +17,8 @@ class LoopTestSuite extends TestSuite {
     public function new() {
         super();
 
-        name = "Function Inlining Test";
-        description = "Inlining functions using the `inline` keyword.";
+        name = "Loop Test";
+        description = "Looping over collections.";
         initFunction = initialize;
         baselineTest = new MethodTest(baseline);
         loops = 10000;
