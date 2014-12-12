@@ -40,7 +40,7 @@ In this example, looping the test function incurred immeasurable overhead.  Base
 
 Test suites are a collection of multiple tests.  To create a Test Suite, extend `TestSuite`:
 
-    class MyTestSuite extends TestSuite {
+    class ExampleTestSuite extends TestSuite {
     }
 
 In your constructor, define properties of the test suite, such as:
@@ -57,8 +57,8 @@ Example constructor:
         public function new() {
             super();
 
-            name = "My Test Suite";
-            description = "This is my test suite for multiple tests";
+            name = "Example Test Suite";
+            description = "This is an example test suite for multiple tests";
             initFunction = initialize;
             baselineTest = new MethodTest(baseline);
             loops = 10000000;
@@ -116,7 +116,7 @@ Altogether your test suite class should look like:
         import performance.model.MethodTest;
         import performance.model.TestSuite;
 
-        class MyTestSuite extends TestSuite {
+        class ExampleTestSuite extends TestSuite {
 
         //------------------------------
         //  properties
@@ -132,8 +132,8 @@ Altogether your test suite class should look like:
         public function new() {
             super();
 
-            name = "My Test Suite";
-            description = "This is my test suite for multiple tests";
+            name = "Example Test Suite";
+            description = "This is an example test suite for multiple tests";
             initFunction = initialize;
             baselineTest = new MethodTest(baseline);
             loops = 10000000;
