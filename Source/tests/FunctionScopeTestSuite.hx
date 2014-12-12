@@ -24,12 +24,12 @@ class FunctionScopeTestSuite extends TestSuite {
         loops = 10000000;
         iterations = 4;
         tests = [
-            new MethodTest(instanceFunctionTest, null, "Instance Function", 0, 1, "Do while loop decremental iteration."),
-            new MethodTest(staticFunctionTest, null, "Static Function", 0, 1, "Do while loop decremental iteration."),
-            new MethodTest(referenceInstanceFunctionTest, null, "Instance Function Reference", 0, 1, "Do while loop decremental iteration."),
-            new MethodTest(referenceStaticFunctionTest, null, "Static Function Reference", 0, 1, "Do while loop decremental iteration."),
-            new MethodTest(reflectCallMethodInstanceTest, null, "Reflect callMethod Instance Function", 0, 1, "Do while loop decremental iteration."),
-            new MethodTest(reflectCallMethodStaticTest, null, "Reflect callMethod Static Function", 0, 1, "Do while loop decremental iteration.")
+            new MethodTest(instanceFunctionTest, null, "Instance Function", 0, 1, "Call function from instance."),
+            new MethodTest(staticFunctionTest, null, "Static Function", 0, 1, "Call static function."),
+            new MethodTest(referenceInstanceFunctionTest, null, "Instance Function Reference", 0, 1, "Call function from instance using a reference."),
+            new MethodTest(referenceStaticFunctionTest, null, "Static Function Reference", 0, 1, "Call static function function using a reference."),
+            new MethodTest(reflectCallMethodInstanceTest, null, "Reflect callMethod Instance Function", 0, 1, "Call function from instance using reflection call method."),
+            new MethodTest(reflectCallMethodStaticTest, null, "Reflect callMethod Static Function", 0, 1, "Call static function using reflection call method.")
         ];
     }
 
