@@ -24,10 +24,11 @@ class FloatTestSuite extends TestSuite {
         loops = 10000000;
         iterations = 4;
         tests = [
-            new MethodTest(addition, null, "addition", 0, 1, "addition"),
-            new MethodTest(subtraction, null, "subtraction", 0, 1, "subtraction"),
-            new MethodTest(division, null, "division", 0, 1, "division"),
-            new MethodTest(multiplication, null, "multiplication", 0, 1, "multiplication")
+            new MethodTest(addition, null, "addition", 0, 1, "addition, `+` operator"),
+            new MethodTest(subtraction, null, "subtraction", 0, 1, "subtraction, `-` operator"),
+            new MethodTest(division, null, "division", 0, 1, "division, `/` operator"),
+            new MethodTest(multiplication, null, "multiplication", 0, 1, "multiplication, `*` operator"),
+            new MethodTest(modulo, null, "modulo", 0, 1, "modulo, `%` operator")
         ];
     }
 
@@ -81,6 +82,13 @@ class FloatTestSuite extends TestSuite {
         var n = 0.0;
         for (i in 0 ... loops) {
             n = i * 0.001;
+        }
+    }
+
+    public function modulo():Void {
+        var n = 0.0;
+        for (i in 0 ... loops) {
+            n = i % 2.0;
         }
     }
 }
