@@ -10,6 +10,7 @@ import tests.FunctionInliningTestSuite;
 import tests.FunctionScopeTestSuite;
 import tests.GraphicsTestSuite;
 import tests.InstantiationTestSuite;
+import tests.LoopHoistingTestSuite;
 import tests.LoopTestSuite;
 
 class Main extends Sprite {
@@ -37,6 +38,7 @@ class Main extends Sprite {
         performanceTest.enqueueTestSuite(new FunctionInliningTestSuite());
         performanceTest.enqueueTestSuite(new EventTestSuite());
         performanceTest.enqueueTestSuite(new LoopTestSuite());
+        performanceTest.enqueueTestSuite(new LoopHoistingTestSuite());
         performanceTest.enqueueTestSuite(new InstantiationTestSuite());
         performanceTest.enqueueTestSuite(new GraphicsTestSuite());
 
