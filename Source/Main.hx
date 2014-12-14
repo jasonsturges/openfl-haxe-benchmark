@@ -2,6 +2,7 @@ package;
 
 import openfl.display.Sprite;
 import performance.controller.PerformanceTest;
+import tests.BitwiseTestSuite;
 import tests.CastTestSuite;
 import tests.EventTestSuite;
 import tests.FloatTestSuite;
@@ -30,6 +31,7 @@ class Main extends Sprite {
         performanceTest = PerformanceTest.getInstance();
 
         performanceTest.enqueueTestSuite(new FloatTestSuite());
+        performanceTest.enqueueTestSuite(new BitwiseTestSuite());
         performanceTest.enqueueTestSuite(new CastTestSuite());
         performanceTest.enqueueTestSuite(new FunctionScopeTestSuite());
         performanceTest.enqueueTestSuite(new FunctionInliningTestSuite());
