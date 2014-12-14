@@ -86,7 +86,7 @@ class GraphicsTestSuite extends TestSuite {
         }
     }
 
-    public function drawPathSingle():Void {
+    public function drawPath():Void {
         shape.graphics.clear();
         for (i in 0 ... loops) {
         }
