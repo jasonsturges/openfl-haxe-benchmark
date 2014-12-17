@@ -28,8 +28,8 @@ class LoopHoistingTestSuite extends TestSuite {
         tests = [
             new MethodTest(unhoisted, null, "For Loop Unhoisted", 0, 1, "For loop unhoisted iteration."),
             new MethodTest(hoisted, null, "For Loop Hoisted", 0, 1, "For loop hoisted iteration"),
-            new MethodTest(whileUnhoised, null, "While Loop Unhoisted", 0, 1, "While loop unhoisted iteration."),
-            new MethodTest(whileHoised, null, "While Loop Unhoisted", 0, 1, "While loop unhoisted iteration.")
+            new MethodTest(whileUnhoisted, null, "While Loop Unhoisted", 0, 1, "While loop unhoisted iteration."),
+            new MethodTest(whileHoisted, null, "While Loop Unhoisted", 0, 1, "While loop unhoisted iteration.")
         ];
     }
 
@@ -77,7 +77,7 @@ class LoopHoistingTestSuite extends TestSuite {
         }
     }
 
-    public function whileUnhoised():Void {
+    public function whileUnhoisted():Void {
         for (i in 0 ... loops) {
             var n:Int = 0;
             while (n < collection.length) {
@@ -86,7 +86,7 @@ class LoopHoistingTestSuite extends TestSuite {
         }
     }
 
-    public function whileHoised():Void {
+    public function whileHoisted():Void {
         var length:Int = collection.length;
         for (i in 0 ... loops) {
             var n:Int = 0;
