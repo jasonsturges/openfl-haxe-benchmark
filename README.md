@@ -16,7 +16,7 @@ In the test suite below, one test has been executed over 4-iterations.
           time: 125, min: 125, max: 127, average: 126, deviation: 0.01587301587
           time: 124, min: 124, max: 127, average: 125.3333333, deviation: 0.02393617021
           time: 125, min: 124, max: 127, average: 125.25, deviation: 0.02395209581
-          Result: 0.00012525ms per operation
+          Result: 0.00012525 ms per operation
 
 Each iteration executes the function 10,000,000 for a cumulative total of 40,000,000 calls to the function.  This is configurable per test suite.
 
