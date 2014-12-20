@@ -22,10 +22,10 @@ Each iteration executes the function 10,000,000 for a cumulative total of 40,000
 
 Each sample of the four iterations are measured - below we see:
 
-- 1st sample made 10,000,000 function calls in 127ms
-- 2nd sample made 10,000,000 function calls in 125ms
-- 3rd sample made 10,000,000 function calls in 124ms
-- 4th sample made 10,000,000 function calls in 125ms
+- 1<sup>st</sup> sample made 10,000,000 function calls in 127ms
+- 2<sup>nd</sup> sample made 10,000,000 function calls in 125ms
+- 3<sup>rd</sup> sample made 10,000,000 function calls in 124ms
+- 4<sup>th</sup> sample made 10,000,000 function calls in 125ms
 
 Each iteration displays a running average of total time to execute test, also expressing consistency by calculating deviation.
 
