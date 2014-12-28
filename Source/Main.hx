@@ -11,6 +11,7 @@ import tests.FunctionScopeTestSuite;
 import tests.GraphicsTestSuite;
 import tests.IndexerTestSuite;
 import tests.InstantiationTestSuite;
+import tests.KeyExistsTestSuite;
 import tests.LoopHoistingTestSuite;
 import tests.LoopTestSuite;
 
@@ -41,6 +42,7 @@ class Main extends Sprite {
         performanceTest.enqueueTestSuite(new LoopTestSuite());
         performanceTest.enqueueTestSuite(new LoopHoistingTestSuite());
         performanceTest.enqueueTestSuite(new IndexerTestSuite());
+        performanceTest.enqueueTestSuite(new KeyExistsTestSuite());
         performanceTest.enqueueTestSuite(new InstantiationTestSuite());
         performanceTest.enqueueTestSuite(new GraphicsTestSuite());
 
