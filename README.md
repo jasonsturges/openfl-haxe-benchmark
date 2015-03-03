@@ -111,10 +111,10 @@ Altogether your test suite class should look like:
 
     package tests;
 
-        import performance.model.MethodTest;
-        import performance.model.TestSuite;
+    import performance.model.MethodTest;
+    import performance.model.TestSuite;
 
-        class ExampleTestSuite extends TestSuite {
+    class ExampleTestSuite extends TestSuite {
 
         //------------------------------
         //  properties
