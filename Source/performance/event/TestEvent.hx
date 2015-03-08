@@ -7,7 +7,7 @@ import performance.model.TestSuite;
 class TestEvent extends Event {
 
     //------------------------------
-    //  singleton instance
+    //  constants
     //------------------------------
 
     public static var START:String = "start";
