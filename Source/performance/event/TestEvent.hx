@@ -23,7 +23,7 @@ class TestEvent extends Event {
 
 
     //------------------------------
-    //  singleton instance
+    //  lifecycle
     //------------------------------
 
     public function new(type:String, ?test, ?testSuite, bubbles:Bool = false, cancelable:Bool = false):Void {
