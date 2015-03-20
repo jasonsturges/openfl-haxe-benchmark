@@ -196,8 +196,8 @@ To execute all tests, call `openfl test` by target, such as:
 
 Executing one of the examples under the `tests` package, here are the results of the instantiation test suite:
 
-![instantiation](http://www.labs.jasonsturges.com/openfl/openfl-haxe-performance-test/instantiation.png)
+![instantiation](http://labs.jasonsturges.com/openfl/openfl-haxe-performance-test/instantiation.png)
 
-![instantiation-platform](http://www.labs.jasonsturges.com/openfl/openfl-haxe-performance-test/instantiation-platform.png)
+![instantiation-platform](http://labs.jasonsturges.com/openfl/openfl-haxe-performance-test/instantiation-platform.png)
 
 <table><tbody><tr><th> </th><th>Neko</th><th>Flash</th><th>HTML5</th><th>Mac</th></tr><tr><td>Point</td><td>0.00083550</td><td>0.00015100</td><td>0.00001000</td><td>0.00002175</td></tr><tr><td>Rectangle</td><td>0.00112750</td><td>0.00014650</td><td>0.00001675</td><td>0.00002375</td></tr><tr><td>Matrix</td><td>0.00197725</td><td>0.00015650</td><td>0.00047350</td><td>0.00003150</td></tr><tr><td>Matrix3D</td><td>0.01145775</td><td>0.00018775</td><td>0.00007300</td><td>0.00019575</td></tr><tr><td>Shape</td><td>0.00951150</td><td>0.00320700</td><td>0.00125675</td><td>0.00125450</td></tr><tr><td>Sprite</td><td>0.02412375</td><td>0.00494575</td><td>0.00178250</td><td>0.00169400</td></tr><tr><td>MovieClip</td><td>0.01653800</td><td>0.00479000</td><td>0.00233325</td><td>0.00161975</td></tr><tr><td>Bitmap</td><td>0.01347125</td><td>0.00702225</td><td>0.00201800</td><td>0.00248875</td></tr><tr><td>BitmapData</td><td>0.00754875</td><td>0.01692500</td><td>0.03907500</td><td>0.00499725</td></tr></tbody></table>
