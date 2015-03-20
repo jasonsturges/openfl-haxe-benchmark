@@ -17,7 +17,6 @@ class TestSuite extends EventDispatcher {
     public var baselineTest:AbstractTest;
     public var initFunction:Dynamic;
     public var baselineTime:Float;
-    public var initTime:Float;
     public var iterations:UInt;
     public var loops:UInt;
 
