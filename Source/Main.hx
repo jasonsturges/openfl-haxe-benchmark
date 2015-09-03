@@ -35,20 +35,22 @@ class Main extends Sprite {
 
         performanceTest = PerformanceTest.getInstance();
 
-        performanceTest.enqueueTestSuite(new FloatTestSuite());
-        performanceTest.enqueueTestSuite(new BitwiseTestSuite());
-        performanceTest.enqueueTestSuite(new TypeCheckingTestSuite());
-        performanceTest.enqueueTestSuite(new CastTestSuite());
-        performanceTest.enqueueTestSuite(new PropertyTestSuite());
-        performanceTest.enqueueTestSuite(new FunctionScopeTestSuite());
-        performanceTest.enqueueTestSuite(new FunctionInliningTestSuite());
-        performanceTest.enqueueTestSuite(new EventTestSuite());
-        performanceTest.enqueueTestSuite(new LoopTestSuite());
-        performanceTest.enqueueTestSuite(new LoopHoistingTestSuite());
-        performanceTest.enqueueTestSuite(new IndexerTestSuite());
-        performanceTest.enqueueTestSuite(new KeyExistsTestSuite());
-        performanceTest.enqueueTestSuite(new InstantiationTestSuite());
-        performanceTest.enqueueTestSuite(new GraphicsTestSuite());
+        performanceTest.enqueueTestSuites([
+            new FloatTestSuite(),
+            new BitwiseTestSuite(),
+            new TypeCheckingTestSuite(),
+            new CastTestSuite(),
+            new PropertyTestSuite(),
+            new FunctionScopeTestSuite(),
+            new FunctionInliningTestSuite(),
+            new EventTestSuite(),
+            new LoopTestSuite(),
+            new LoopHoistingTestSuite(),
+            new IndexerTestSuite(),
+            new KeyExistsTestSuite(),
+            new InstantiationTestSuite(),
+            new GraphicsTestSuite()
+        ]);
 
         performanceTest.runAsynchronous();
     }

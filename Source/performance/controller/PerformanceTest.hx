@@ -57,6 +57,12 @@ class PerformanceTest extends EventDispatcher {
         queue.push(testSuite);
     }
 
+    public function enqueueTestSuites(testSuites:Array<TestSuite>) {
+        for (t in testSuites) {
+            enqueueTestSuite(t);
+        }
+    }
+
     private function timerHandler(event:TimerEvent):Void {
         next();
     }
