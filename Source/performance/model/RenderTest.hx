@@ -1,10 +1,10 @@
 package performance.model;
 
-import flash.Lib;
 import openfl.display.BitmapData;
 import openfl.display.DisplayObject;
 import openfl.geom.Matrix;
 import openfl.geom.Rectangle;
+import openfl.Lib;
 
 class RenderTest extends AbstractTest {
 

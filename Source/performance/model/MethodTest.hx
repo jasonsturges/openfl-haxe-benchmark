@@ -1,6 +1,6 @@
 package performance.model;
 
-import flash.Lib;
+import openfl.Lib;
 
 class MethodTest extends AbstractTest {
 
