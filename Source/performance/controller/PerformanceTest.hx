@@ -4,6 +4,7 @@ import openfl.events.Event;
 import openfl.events.EventDispatcher;
 import openfl.events.TimerEvent;
 import openfl.utils.Timer;
+import performance.constant.TestState;
 import performance.event.TestEvent;
 import performance.model.AbstractTest;
 import performance.model.TestSuite;
@@ -32,9 +33,10 @@ class PerformanceTest extends EventDispatcher {
     private var index:Int;
     private var iteration:UInt;
     private var synchronous:Bool;
-    private var timer:Timer;
     private var currentTest:AbstractTest;
     private var currentTestSuite:TestSuite;
+    private var timer:Timer;
+    private var state:String;
 
 
     //------------------------------
@@ -47,6 +49,7 @@ class PerformanceTest extends EventDispatcher {
         queue = [];
         synchronous = false;
         index = iteration = 0;
+        state = TestState.IDLE;
 
         timer = new Timer(50, 1);
         timer.addEventListener(TimerEvent.TIMER, timerHandler);
@@ -63,10 +66,6 @@ class PerformanceTest extends EventDispatcher {
         }
     }
 
-    private function timerHandler(event:TimerEvent):Void {
-        next();
-    }
-
     public function runSynchronous():Void {
         synchronous = true;
         next();
@@ -77,31 +76,52 @@ class PerformanceTest extends EventDispatcher {
         next();
     }
 
+    private function timerHandler(event:TimerEvent):Void {
+        next();
+    }
+
     private function next():Void {
-        if (currentTestSuite == null) {
-            currentTestSuite = queue.shift();
-            index = iteration = 0;
+        switch (state) {
+            case TestState.IDLE:
+                // If there are more tests to run, load next test suite
+                if (queue.length > 0) {
+                    currentTestSuite = queue.shift();
+                    state = TestState.PENDING;
+                }
+            case TestState.PENDING:
+                // There is a test suite to run
+                trace("TestSuite: " + currentTestSuite.name + " (" + currentTestSuite.description + ")");
+                state = TestState.INITIALIZE;
+            case TestState.INITIALIZE:
+                // Initialize the test suite
+                index = iteration = 0;
+                if (currentTestSuite.initFunction != null)
+                    Reflect.callMethod(currentTestSuite, currentTestSuite.initFunction, []);
+                state = TestState.BENCHMARK;
+            case TestState.BENCHMARK:
+                // Benchmark the test suite
+                if (currentTestSuite.baselineTest != null) {
+                    runBaselineTest();
+                    trace("   Baseline time: " + currentTestSuite.baselineTime);
+                }
+                state = TestState.RUNNING;
+            case TestState.RUNNING:
+                // Run each iteration of the test suite
+                if (index < currentTestSuite.tests.length) {
+                    if (runTest(currentTestSuite.tests[index])) {
+                        index++;
+                    }
+                }
 
-            trace("TestSuite: " + currentTestSuite.name + " (" + currentTestSuite.description + ")");
-
-            if (currentTestSuite.initFunction != null)
-                Reflect.callMethod(currentTestSuite, currentTestSuite.initFunction, []);
-
-            if (currentTestSuite.baselineTest != null) {
-                runBaselineTest();
-                trace("   Baseline time: " + currentTestSuite.baselineTime);
-            }
-        }
-
-        if (index < currentTestSuite.tests.length) {
-            if (runTest(currentTestSuite.tests[index])) {
-                index++;
-            }
-        }
-
-        if (index >= currentTestSuite.tests.length) {
-            currentTestSuite.complete();
-            currentTestSuite = null;
+                if (index >= currentTestSuite.tests.length) {
+                    currentTestSuite.complete();
+                    state = TestState.DISPOSE;
+                }
+            case TestState.DISPOSE:
+                // Cleanup and dispose test suite
+                currentTestSuite.dispose();
+                currentTestSuite = null;
+                state = TestState.IDLE;
         }
 
         if (synchronous) {
@@ -111,6 +131,7 @@ class PerformanceTest extends EventDispatcher {
             timer.start();
         }
     }
+
 
     private function runBaselineTest():Void {
         var baselineTest:AbstractTest = currentTestSuite.baselineTest;
@@ -166,12 +187,21 @@ class PerformanceTest extends EventDispatcher {
         trace("      time: " + time +
         ", min: " + test.min +
         ", max: " + test.max +
-        ", average: " + test.average +
-        ", deviation: " + test.deviation);
+        ", average: " + toFixed(test.average, 3) +
+        ", deviation: " + toFixed(test.deviation, 3));
     }
 
     public function traceTestResult(test:AbstractTest, testSuite:TestSuite):Void {
-        trace("      Result: " + ((test.average - testSuite.baselineTime) / testSuite.loops) + " ms per operation");
+        var t:Float = ((test.average - testSuite.baselineTime) / testSuite.loops);
+        trace("      Result: " + t + " ms per operation");
+
+        if (t < 0) {
+            trace("      ERROR: Baseline faster than test case!");
+        }
+    }
+
+    public static function toFixed(value:Float, precision:UInt):Float {
+        return Std.int(value * (Math.pow(10, precision))) / Math.pow(10, precision);
     }
 
 }

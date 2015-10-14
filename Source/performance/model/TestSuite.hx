@@ -56,4 +56,7 @@ class TestSuite extends EventDispatcher {
         dispatchEvent(new TestEvent(TestEvent.COMPLETE));
     }
 
+    public function dispose():Void {
+    }
+
 }

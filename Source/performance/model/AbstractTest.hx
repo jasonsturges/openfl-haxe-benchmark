@@ -25,7 +25,7 @@ class AbstractTest extends EventDispatcher {
     //  lifecycle
     //------------------------------
 
-    public function new(?name:String, iterations:UInt = 0, loops:UInt = 1, ?description:String) {
+    public function new(?name:String, ?iterations:UInt = 0, ?loops:UInt = 1, ?description:String) {
         super();
 
         this.name = name;
