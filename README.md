@@ -1,11 +1,11 @@
 OpenFL Haxe Performance Test
 ============================
 
-Modeled after [Grant Skinner's](http://gskinner.com/blog) ActionScript project [PerformanceTest](http://gskinner.com/blog/archives/2010/02/performancetest.html), this variation is designed for OpenFL to benchmark segments of Haxe code.
+Modeled after [Grant Skinner's](http://gskinner.com/blog) ActionScript project [PerformanceTest](http://gskinner.com/blog/archives/2010/02/performancetest.html), this variation is designed for [OpenFL](http://www.openfl.org/) to benchmark segments of Haxe code.
 
 Executing a batch of tests every 50-milliseconds on a Timer, each iteration runs a defined number of loops for multiple samples.  Overhead baseline is removed from the result, and deviation of each iteration is denoted.
 
-#####Example: Event Dispatch Test
+### Example: Event Dispatch Test
 
 In the test suite below, one test has been executed over 4-iterations.
 
@@ -107,7 +107,7 @@ This means your "Test Function 1" test will be tested 4-iterations, and each ite
 
 Likewise, exactly the same thing will happen for the second test defined: "Test Function 2".
 
-Altogether your test suite class should look like:
+### Altogether your test suite class should look like:
 
     package tests;
 
@@ -183,7 +183,7 @@ Altogether your test suite class should look like:
     }
 
 
-##### Executing Tests
+### Executing Tests
 
 Currently tests results are traced; therefore, some targets will output results in a terminal whereas targets such as html5 will need to inspect the console.
 
