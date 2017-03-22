@@ -14,7 +14,7 @@ import tests.InstantiationTestSuite;
 import tests.KeyExistsTestSuite;
 import tests.LoopHoistingTestSuite;
 import tests.LoopTestSuite;
-import tests.PropertyTestSuite;
+import tests.MapTestSuite;
 import tests.TypeCheckingTestSuite;
 
 class Main extends Sprite {
@@ -40,7 +40,7 @@ class Main extends Sprite {
             new BitwiseTestSuite(),
             new TypeCheckingTestSuite(),
             new CastTestSuite(),
-            new PropertyTestSuite(),
+            new MapTestSuite(),
             new FunctionScopeTestSuite(),
             new FunctionInliningTestSuite(),
             new EventTestSuite(),

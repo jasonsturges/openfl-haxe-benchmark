@@ -3,7 +3,7 @@ package tests;
 import performance.model.MethodTest;
 import performance.model.TestSuite;
 
-class PropertyTestSuite extends TestSuite {
+class MapTestSuite extends TestSuite {
 
 //------------------------------
 //  properties
@@ -20,8 +20,8 @@ class PropertyTestSuite extends TestSuite {
     public function new() {
         super();
 
-        name = "Property Test";
-        description = "Time to lookup property values";
+        name = "Map Test";
+        description = "Map and object key value access.";
         initFunction = initialize;
         baselineTest = new MethodTest(baseline);
         loops = 1000000;
