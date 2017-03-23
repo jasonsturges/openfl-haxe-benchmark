@@ -15,6 +15,7 @@ import tests.KeyExistsTestSuite;
 import tests.LoopHoistingTestSuite;
 import tests.LoopTestSuite;
 import tests.MapTestSuite;
+import tests.PropertyTestSuite;
 import tests.TypeCheckingTestSuite;
 
 class Main extends Sprite {
@@ -36,6 +37,7 @@ class Main extends Sprite {
         performanceTest = PerformanceTest.getInstance();
 
         performanceTest.enqueueTestSuites([
+            new PropertyTestSuite(),
             new FloatTestSuite(),
             new BitwiseTestSuite(),
             new TypeCheckingTestSuite(),
