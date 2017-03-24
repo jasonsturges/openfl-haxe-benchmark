@@ -1,4 +1,4 @@
-package benchmark.controller;
+package benchmark.core;
 
 import openfl.events.EventDispatcher;
 import openfl.events.TimerEvent;
@@ -8,17 +8,17 @@ import benchmark.event.TestEvent;
 import benchmark.model.AbstractTest;
 import benchmark.model.TestSuite;
 
-class PerformanceTest extends EventDispatcher {
+class Benchmark extends EventDispatcher {
 
     //------------------------------
     //  singleton instance
     //------------------------------
 
-    private static var instance:PerformanceTest;
+    private static var instance:Benchmark;
 
-    public static function getInstance():PerformanceTest {
-        if (PerformanceTest.instance == null)
-            PerformanceTest.instance = new PerformanceTest();
+    public static function getInstance():Benchmark {
+        if (Benchmark.instance == null)
+            Benchmark.instance = new Benchmark();
 
         return instance;
     }

@@ -1,7 +1,7 @@
 package;
 
 import openfl.display.Sprite;
-import benchmark.controller.PerformanceTest;
+import benchmark.core.Benchmark;
 import tests.BitwiseTestSuite;
 import tests.CastTestSuite;
 import tests.EventTestSuite;
@@ -24,7 +24,7 @@ class Main extends Sprite {
     //  model
     //------------------------------
 
-    private var performanceTest:PerformanceTest;
+    private var performanceTest:Benchmark;
 
 
     //------------------------------
@@ -34,7 +34,7 @@ class Main extends Sprite {
     public function new() {
         super();
 
-        performanceTest = PerformanceTest.getInstance();
+        performanceTest = Benchmark.getInstance();
 
         performanceTest.enqueueTestSuites([
             new PropertyTestSuite(),
