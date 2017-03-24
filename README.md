@@ -1,5 +1,5 @@
-OpenFL Haxe Performance Test
-============================
+OpenFL Haxe Benchmark
+=====================
 
 Modeled after [Grant Skinner's](http://gskinner.com/blog) ActionScript project [PerformanceTest](http://gskinner.com/blog/archives/2010/02/performancetest.html), this variation is designed for [OpenFL](http://www.openfl.org/) to benchmark segments of Haxe code.
 
