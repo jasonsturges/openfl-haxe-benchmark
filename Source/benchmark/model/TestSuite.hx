@@ -2,7 +2,6 @@ package benchmark.model;
 
 import benchmark.event.TestEvent;
 import Lambda;
-import openfl.events.Event;
 import openfl.events.EventDispatcher;
 
 class TestSuite extends EventDispatcher {

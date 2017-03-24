@@ -1,6 +1,5 @@
 package benchmark.controller;
 
-import openfl.events.Event;
 import openfl.events.EventDispatcher;
 import openfl.events.TimerEvent;
 import openfl.utils.Timer;

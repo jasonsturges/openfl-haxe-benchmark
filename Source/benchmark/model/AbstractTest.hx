@@ -1,6 +1,5 @@
 package benchmark.model;
 
-import openfl.events.Event;
 import openfl.events.EventDispatcher;
 import benchmark.event.TestEvent;
 
