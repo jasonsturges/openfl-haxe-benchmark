@@ -24,7 +24,7 @@ class Main extends Sprite {
     //  model
     //------------------------------
 
-    private var performanceTest:Benchmark;
+    private var _benchmark:Benchmark;
 
 
     //------------------------------
@@ -34,9 +34,9 @@ class Main extends Sprite {
     public function new() {
         super();
 
-        performanceTest = Benchmark.getInstance();
+        _benchmark = Benchmark.getInstance();
 
-        performanceTest.enqueueTestSuites([
+        _benchmark.enqueueTestSuites([
             new PropertyTestSuite(),
             new FloatTestSuite(),
             new BitwiseTestSuite(),
@@ -54,7 +54,7 @@ class Main extends Sprite {
             new GraphicsTestSuite()
         ]);
 
-        performanceTest.runAsynchronous();
+        _benchmark.runAsynchronous();
     }
 
 }
