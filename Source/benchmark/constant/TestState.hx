@@ -1,4 +1,4 @@
-package performance.constant;
+package benchmark.constant;
 
 class TestState {
 

@@ -1,13 +1,13 @@
-package performance.controller;
+package benchmark.controller;
 
 import openfl.events.Event;
 import openfl.events.EventDispatcher;
 import openfl.events.TimerEvent;
 import openfl.utils.Timer;
-import performance.constant.TestState;
-import performance.event.TestEvent;
-import performance.model.AbstractTest;
-import performance.model.TestSuite;
+import benchmark.constant.TestState;
+import benchmark.event.TestEvent;
+import benchmark.model.AbstractTest;
+import benchmark.model.TestSuite;
 
 class PerformanceTest extends EventDispatcher {
 

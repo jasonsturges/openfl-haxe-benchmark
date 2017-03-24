@@ -1,8 +1,8 @@
-package performance.event;
+package benchmark.event;
 
 import openfl.events.Event;
-import performance.model.AbstractTest;
-import performance.model.TestSuite;
+import benchmark.model.AbstractTest;
+import benchmark.model.TestSuite;
 
 class TestEvent extends Event {
 

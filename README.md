@@ -111,8 +111,8 @@ Likewise, exactly the same thing will happen for the second test defined: "Test 
 
     package tests;
 
-    import performance.model.MethodTest;
-    import performance.model.TestSuite;
+    import benchmark.model.MethodTest;
+    import benchmark.model.TestSuite;
 
     class ExampleTestSuite extends TestSuite {
 

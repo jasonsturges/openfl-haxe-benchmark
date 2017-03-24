@@ -3,8 +3,8 @@ package tests;
 import flash.Vector;
 import openfl.display.Graphics;
 import openfl.display.Shape;
-import performance.model.MethodTest;
-import performance.model.TestSuite;
+import benchmark.model.MethodTest;
+import benchmark.model.TestSuite;
 
 class GraphicsTestSuite extends TestSuite {
 

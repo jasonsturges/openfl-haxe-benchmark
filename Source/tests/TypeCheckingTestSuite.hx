@@ -1,8 +1,8 @@
 package tests;
 
 import openfl.display.MovieClip;
-import performance.model.MethodTest;
-import performance.model.TestSuite;
+import benchmark.model.MethodTest;
+import benchmark.model.TestSuite;
 
 
 /**

@@ -1,4 +1,4 @@
-package performance.model;
+package benchmark.model;
 
 import openfl.Lib;
 

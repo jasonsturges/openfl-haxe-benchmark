@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	
-	<meta title="OpenFl Haxe Benchmark" package="com.jasonsturges.labs.performance" version="1.1.0" company="Jason Sturges" />
+	<meta title="OpenFl Haxe Benchmark" package="com.jasonsturges.labs.benchmark" version="1.1.0" company="Jason Sturges" />
 	<app main="Main" path="Export" file="OpenFlHaxeBenchmark" />
 	
 	<source path="Source" />

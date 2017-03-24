@@ -1,8 +1,8 @@
-package performance.model;
+package benchmark.model;
 
 import openfl.events.Event;
 import openfl.events.EventDispatcher;
-import performance.event.TestEvent;
+import benchmark.event.TestEvent;
 
 class AbstractTest extends EventDispatcher {
 

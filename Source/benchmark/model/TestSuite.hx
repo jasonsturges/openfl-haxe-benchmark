@@ -1,6 +1,6 @@
-package performance.model;
+package benchmark.model;
 
-import performance.event.TestEvent;
+import benchmark.event.TestEvent;
 import Lambda;
 import openfl.events.Event;
 import openfl.events.EventDispatcher;

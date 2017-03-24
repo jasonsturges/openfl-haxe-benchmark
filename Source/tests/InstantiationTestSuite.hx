@@ -9,8 +9,8 @@ import openfl.geom.Matrix;
 import openfl.geom.Matrix3D;
 import openfl.geom.Point;
 import openfl.geom.Rectangle;
-import performance.model.MethodTest;
-import performance.model.TestSuite;
+import benchmark.model.MethodTest;
+import benchmark.model.TestSuite;
 
 class InstantiationTestSuite extends TestSuite {
 

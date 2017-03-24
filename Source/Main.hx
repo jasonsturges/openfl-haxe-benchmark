@@ -1,7 +1,7 @@
 package;
 
 import openfl.display.Sprite;
-import performance.controller.PerformanceTest;
+import benchmark.controller.PerformanceTest;
 import tests.BitwiseTestSuite;
 import tests.CastTestSuite;
 import tests.EventTestSuite;

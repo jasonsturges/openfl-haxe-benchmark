@@ -22,7 +22,7 @@
   <build>
     <option directives="" />
     <option flashStrict="False" />
-    <option mainClass="com.jasonsturges.labs.performance" />
+    <option mainClass="com.jasonsturges.labs.benchmark" />
     <option enabledebug="False" />
     <option additional="" />
   </build>
