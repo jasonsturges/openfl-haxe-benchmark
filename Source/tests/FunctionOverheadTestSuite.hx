@@ -26,8 +26,12 @@ class FunctionOverheadTestSuite extends TestSuite {
         tests = [
             new MethodTest(instanceFunctionTest, null, "Instance Function", 0, 1, "Call function from instance."),
             new MethodTest(staticFunctionTest, null, "Static Function", 0, 1, "Call static function."),
+            new MethodTest(namedLocalFunctionTest, null, "Named Local Function", 0, 1, "Call named local function from inside block expression."),
+            //new MethodTest(function() { }, null, "Anonymous Local Function", 0, 1, "Call anonymous local function."),
             new MethodTest(referenceInstanceFunctionTest, null, "Instance Function Reference", 0, 1, "Call function from instance using a reference."),
             new MethodTest(referenceStaticFunctionTest, null, "Static Function Reference", 0, 1, "Call static function function using a reference."),
+            new MethodTest(referenceNamedLocalFunctionTest, null, "Named Local Function Reference", 0, 1, "Call local function from inside block expression using a reference."),
+            new MethodTest(referenceAnonymousFunctionTest, null, "Anonymous Local Function Reference", 0, 1, "Call local function from inside block expression using a reference."),
             new MethodTest(reflectCallMethodInstanceTest, null, "Reflect callMethod Instance Function", 0, 1, "Call function from instance using reflection call method."),
             new MethodTest(reflectCallMethodStaticTest, null, "Reflect callMethod Static Function", 0, 1, "Call static function using reflection call method.")
         ];
@@ -76,6 +80,14 @@ class FunctionOverheadTestSuite extends TestSuite {
         }
     }
 
+    public function namedLocalFunctionTest():Void {
+        function localFunction() { }
+
+        for (i in 0 ... loops) {
+            localFunction();
+        }
+    }
+
     public function referenceInstanceFunctionTest():Void {
         var fn:Dynamic = instanceFunction;
         for (i in 0 ... loops) {
@@ -85,6 +97,22 @@ class FunctionOverheadTestSuite extends TestSuite {
 
     public function referenceStaticFunctionTest():Void {
         var fn:Dynamic = FunctionOverheadTestSuite.staticFunction;
+        for (i in 0 ... loops) {
+            fn();
+        }
+    }
+
+    public function referenceNamedLocalFunctionTest():Void {
+        var fn:Dynamic = function localFunction() { }
+
+        for (i in 0 ... loops) {
+            fn();
+        }
+    }
+
+    public function referenceAnonymousFunctionTest():Void {
+        var fn:Dynamic = function() { };
+
         for (i in 0 ... loops) {
             fn();
         }
