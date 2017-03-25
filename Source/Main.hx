@@ -7,7 +7,7 @@ import tests.CastTestSuite;
 import tests.EventTestSuite;
 import tests.FloatTestSuite;
 import tests.FunctionInliningTestSuite;
-import tests.FunctionScopeTestSuite;
+import tests.FunctionOverheadTestSuite;
 import tests.GraphicsTestSuite;
 import tests.IndexerTestSuite;
 import tests.InstantiationTestSuite;
@@ -43,7 +43,7 @@ class Main extends Sprite {
             new TypeCheckingTestSuite(),
             new CastTestSuite(),
             new MapTestSuite(),
-            new FunctionScopeTestSuite(),
+            new FunctionOverheadTestSuite(),
             new FunctionInliningTestSuite(),
             new EventTestSuite(),
             new LoopTestSuite(),

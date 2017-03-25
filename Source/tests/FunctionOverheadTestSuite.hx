@@ -3,7 +3,7 @@ package tests;
 import benchmark.model.MethodTest;
 import benchmark.model.TestSuite;
 
-class FunctionScopeTestSuite extends TestSuite {
+class FunctionOverheadTestSuite extends TestSuite {
 
     //------------------------------
     //  properties
@@ -17,8 +17,8 @@ class FunctionScopeTestSuite extends TestSuite {
     public function new() {
         super();
 
-        name = "Function Scope Test";
-        description = "Function overhead from different scopes.";
+        name = "Function Overhead Test";
+        description = "Function overhead from different scopes";
         initFunction = initialize;
         baselineTest = new MethodTest(baseline);
         loops = 10000000;
@@ -72,7 +72,7 @@ class FunctionScopeTestSuite extends TestSuite {
 
     public function staticFunctionTest():Void {
         for (i in 0 ... loops) {
-            FunctionScopeTestSuite.staticFunction();
+            FunctionOverheadTestSuite.staticFunction();
         }
     }
 
@@ -84,7 +84,7 @@ class FunctionScopeTestSuite extends TestSuite {
     }
 
     public function referenceStaticFunctionTest():Void {
-        var fn:Dynamic = FunctionScopeTestSuite.staticFunction;
+        var fn:Dynamic = FunctionOverheadTestSuite.staticFunction;
         for (i in 0 ... loops) {
             fn();
         }
@@ -98,7 +98,7 @@ class FunctionScopeTestSuite extends TestSuite {
 
     public function reflectCallMethodStaticTest():Void {
         for (i in 0 ... loops) {
-            Reflect.callMethod(this, FunctionScopeTestSuite.staticFunction, []);
+            Reflect.callMethod(this, FunctionOverheadTestSuite.staticFunction, []);
         }
     }
 
