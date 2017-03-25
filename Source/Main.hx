@@ -34,7 +34,7 @@ class Main extends Sprite {
     public function new() {
         super();
 
-        _benchmark = Benchmark.getInstance();
+        _benchmark = new Benchmark();
 
         _benchmark.enqueueTestSuites([
             new PropertyTestSuite(),

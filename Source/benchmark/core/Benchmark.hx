@@ -11,20 +11,6 @@ import benchmark.model.TestSuite;
 class Benchmark extends EventDispatcher {
 
     //------------------------------
-    //  singleton instance
-    //------------------------------
-
-    private static var instance:Benchmark;
-
-    public static function getInstance():Benchmark {
-        if (Benchmark.instance == null)
-            Benchmark.instance = new Benchmark();
-
-        return instance;
-    }
-
-
-    //------------------------------
     //  model
     //------------------------------
 
