@@ -4,6 +4,7 @@ import openfl.display.Sprite;
 import benchmark.core.Benchmark;
 import tests.BitwiseTestSuite;
 import tests.CastTestSuite;
+import tests.CollectionTestSuite;
 import tests.EventTestSuite;
 import tests.FloatTestSuite;
 import tests.FunctionInliningTestSuite;
@@ -43,6 +44,7 @@ class Main extends Sprite {
             new TypeCheckingTestSuite(),
             new CastTestSuite(),
             new MapTestSuite(),
+            new CollectionTestSuite(),
             new FunctionOverheadTestSuite(),
             new FunctionInliningTestSuite(),
             new EventTestSuite(),
