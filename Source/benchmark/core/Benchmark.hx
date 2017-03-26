@@ -178,7 +178,7 @@ class Benchmark extends EventDispatcher {
 
     public function traceTestResult(test:AbstractTest, testSuite:TestSuite):Void {
         var t:Float = ((test.average - testSuite.baselineTime) / testSuite.loops);
-        trace("      Result: " + t + " ms per operation");
+        trace("      Result: " + t + " ms per operation / " + (1.0 / t) + " operations per ms");
 
         if (t < 0) {
             trace("      ERROR: Baseline faster than test case!");
