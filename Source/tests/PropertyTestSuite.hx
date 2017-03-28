@@ -39,7 +39,11 @@ class PropertyTestSuite extends TestSuite {
             new MethodTest(fieldValue, null, "Field value", 0, 1, "Retrieve value of field directly without calling accessor"),
             new MethodTest(propertyAccessor, null, "Property Accessor", 0, 1, "Retrieve value by calling property getter accessor"),
             new MethodTest(fieldAssignment, null, "Field Assignment", 0, 1, "Set value of field directly without calling mutator"),
-            new MethodTest(propertyMutator, null, "Property Mutator", 0, 1, "Set value by calling propety setter mutator")
+            new MethodTest(propertyMutator, null, "Property Mutator", 0, 1, "Set value by calling propety setter mutator"),
+            new MethodTest(reflectField, null, "Reflect Field", 0, 1, "Get field using reflection"),
+            new MethodTest(reflectProperty, null, "Reflect Property", 0, 1, "Get property using reflection"),
+            new MethodTest(reflectSetField, null, "Reflect Set Field", 0, 1, "Set field using reflection"),
+            new MethodTest(reflectSetProperty, null, "Reflect Set Property", 0, 1, "Set property using reflection")
         ];
     }
 
@@ -92,6 +96,34 @@ class PropertyTestSuite extends TestSuite {
     public function propertyMutator():Void {
         for (i in 0 ... loops) {
             property = i;
+        }
+    }
+
+    public function reflectField():Void {
+        var n:UInt;
+
+        for (i in 0 ... loops) {
+            n = Reflect.field(this, "_property");
+        }
+    }
+
+    public function reflectProperty():Void {
+        var n:UInt;
+
+        for (i in 0 ... loops) {
+            n = Reflect.getProperty(this, "property");
+        }
+    }
+
+    public function reflectSetField():Void {
+        for (i in 0 ... loops) {
+            Reflect.setField(this, "_property", i);
+        }
+    }
+
+    public function reflectSetProperty():Void {
+        for (i in 0 ... loops) {
+            Reflect.setProperty(this, "property", i);
         }
     }
 
