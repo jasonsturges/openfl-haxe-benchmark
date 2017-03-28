@@ -5,6 +5,7 @@ import benchmark.core.Benchmark;
 import tests.BitwiseTestSuite;
 import tests.CastTestSuite;
 import tests.CollectionTestSuite;
+import tests.ConstantTestSuite;
 import tests.EventTestSuite;
 import tests.FloatTestSuite;
 import tests.FunctionInliningTestSuite;
@@ -38,6 +39,7 @@ class Main extends Sprite {
         _benchmark = new Benchmark();
 
         _benchmark.enqueueTestSuites([
+            new ConstantTestSuite(),
             new PropertyTestSuite(),
             new FloatTestSuite(),
             new BitwiseTestSuite(),
