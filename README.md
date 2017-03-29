@@ -36,7 +36,7 @@ Finally, after all samples of this test have been run, the result of the functio
 In this example, looping the test function incurred immeasurable overhead.  Baseline is calculated and removed from total results to compensate computation time of executing the test loop.
 
 
-##### Creating Test Suites
+### Creating Test Suites
 
 Test suites are a collection of multiple tests.  To create a Test Suite, extend `TestSuite`:
 
@@ -82,7 +82,7 @@ For example, calculate how much overhead it takes to execute a `for` loop:
             }
         }
 
-##### Add Tests to Test Suites
+#### Add Tests to Test Suites
 
 To add tests to your test suite, add a subclass of `AbstractTest` to your `tests` array of your test suite.  For example, to call a method on your test suite, use `MethodTest`:
 
@@ -109,7 +109,7 @@ This means your "Test Function 1" test will be tested 4-iterations, and each ite
 
 Likewise, exactly the same thing will happen for the second test defined: "Test Function 2".
 
-### Altogether your test suite class should look like:
+### Example Test Suite
 
     package tests;
 
