@@ -1,7 +1,9 @@
 OpenFL Haxe Benchmark
 =====================
 
-Modeled after [Grant Skinner's](http://gskinner.com/blog) ActionScript project [PerformanceTest](http://gskinner.com/blog/archives/2010/02/performancetest.html), this variation is designed for [OpenFL](http://www.openfl.org/) to benchmark segments of Haxe code.
+Modeled after [Grant Skinner's](http://gskinner.com/blog) ActionScript project [PerformanceTest](http://gskinner.com/blog/archives/2010/02/performancetest.html), this variation is designed for [OpenFL](http://www.openfl.org/) to benchmark segments of [Haxe](https://haxe.org/) code.
+
+![instantiation](http://labs.jasonsturges.com/openfl/openfl-haxe-benchmark/object-instantiation.png)
 
 Executing a batch of tests every 50-milliseconds on a Timer, each iteration runs a defined number of loops for multiple samples.  Overhead baseline is removed from the result, and deviation of each iteration is denoted.
 
@@ -16,7 +18,7 @@ In the test suite below, one test has been executed over 4-iterations.
           time: 125, min: 125, max: 127, average: 126, deviation: 0.01587301587
           time: 124, min: 124, max: 127, average: 125.3333333, deviation: 0.02393617021
           time: 125, min: 124, max: 127, average: 125.25, deviation: 0.02395209581
-          Result: 0.00012525 ms per operation
+          Result: 0.00012525 ms per operation, 7984 operations per ms
 
 Each iteration executes the function 10,000,000 for a cumulative total of 40,000,000 calls to the function.  This is configurable per test suite.
 
@@ -195,22 +197,6 @@ To execute all tests, call `openfl test` by target, such as:
     $ openfl test html5
 
 Executing one of the examples under the `tests` package, here are the results of the instantiation test suite:
-
-![instantiation](http://labs.jasonsturges.com/openfl/openfl-haxe-performance-test/instantiation.png)
-
-![instantiation-platform](http://labs.jasonsturges.com/openfl/openfl-haxe-performance-test/instantiation-platform.png)
-
-| | Neko | Flash | HTML5 | Mac |
-| --- | --- | --- | --- | --- |
-| Point | 0.00083550 | 0.00015100 | 0.00001000 | 0.00002175 |
-| Rectangle | 0.00112750 | 0.00014650 | 0.00001675 | 0.00002375 | 
-| Matrix | 0.00197725 | 0.00015650 | 0.00047350 | 0.00003150 |
-| Matrix3D | 0.01145775 | 0.00018775 | 0.00007300 | 0.00019575 |
-| Shape | 0.00951150 | 0.00320700 | 0.00125675 | 0.00125450 |
-| Sprite | 0.02412375 | 0.00494575 | 0.00178250 | 0.00169400 |
-| MovieClip | 0.01653800 | 0.00479000 | 0.00233325 | 0.00161975 |
-| Bitmap | 0.01347125 | 0.00702225 | 0.00201800 | 0.00248875 |
-| BitmapData | 0.00754875 | 0.01692500 | 0.03907500 | 0.00499725 |
 
 
 ## License
