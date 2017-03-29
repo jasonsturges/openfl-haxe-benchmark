@@ -48,7 +48,7 @@ class FloatTestSuite extends TestSuite {
     public function baseline():Void {
         var n = 0.0;
         for (i in 0 ... loops) {
-            n = 0.0;
+            n = i;
         }
     }
 
