@@ -75,7 +75,7 @@ class Benchmark extends EventDispatcher {
                 }
             case TestState.PENDING:
                 // There is a test suite to run
-                trace("TestSuite: " + currentTestSuite.name + " (" + currentTestSuite.description + ")");
+                traceTestSuite(currentTestSuite);
                 state = TestState.INITIALIZE;
             case TestState.INITIALIZE:
                 // Initialize the test suite
@@ -87,7 +87,7 @@ class Benchmark extends EventDispatcher {
                 // Benchmark the test suite
                 if (currentTestSuite.baselineTest != null) {
                     runBaselineTest();
-                    trace("   Baseline time: " + currentTestSuite.baselineTime);
+                    traceBaseline(currentTestSuite);
                 }
                 state = TestState.RUNNING;
             case TestState.RUNNING:
@@ -117,7 +117,6 @@ class Benchmark extends EventDispatcher {
         }
     }
 
-
     private function runBaselineTest():Void {
         var baselineTest:AbstractTest = currentTestSuite.baselineTest;
         var i:Int = baselineTest.iterations == 0 ? 10 : baselineTest.iterations;
@@ -144,7 +143,7 @@ class Benchmark extends EventDispatcher {
             iteration = 0;
             currentTest = test;
 
-            trace("   Test: " + currentTest.name + " (" + currentTest.description + ")");
+            traceTest(currentTest);
 
             if (test.iterations == 0 && currentTestSuite != null)
                 test.iterations = currentTestSuite.iterations;
@@ -166,6 +165,18 @@ class Benchmark extends EventDispatcher {
         }
 
         return completed;
+    }
+
+    public function traceTestSuite(testSuite:TestSuite):Void {
+        trace("TestSuite: " + testSuite.name + " (" + testSuite.description + ")");
+    }
+
+    public function traceBaseline(testSuite:TestSuite):Void {
+        trace("   Baseline time: " + testSuite.baselineTime);
+    }
+
+    public function traceTest(test:AbstractTest) {
+        trace("   Test: " + currentTest.name + " (" + currentTest.description + ")");
     }
 
     public function traceTestIteration(time:Float, test:AbstractTest):Void {
