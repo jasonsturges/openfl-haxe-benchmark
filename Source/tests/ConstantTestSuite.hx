@@ -49,7 +49,7 @@ class ConstantTestSuite extends TestSuite {
         var n;
 
         for (i in 0 ... loops) {
-            n = 1;
+            n = 1 + i;
         }
     }
 
@@ -62,7 +62,7 @@ class ConstantTestSuite extends TestSuite {
         var n;
 
         for (i in 0 ... loops) {
-            n = INLINE_CONSTANT;
+            n = INLINE_CONSTANT + i;
         }
     }
 
@@ -70,7 +70,7 @@ class ConstantTestSuite extends TestSuite {
         var n;
 
         for (i in 0 ... loops) {
-            n = READONLY_CONSTANT;
+            n = READONLY_CONSTANT + i;
         }
     }
 
