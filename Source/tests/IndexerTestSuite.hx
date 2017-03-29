@@ -30,7 +30,6 @@ class IndexerTestSuite extends TestSuite {
         loops = 1000000;
         iterations = 4;
         tests = [
-            new MethodTest(localReference, null, "localReference", 0, 1, "Local reference, outside the loop for comparison."),
             new MethodTest(arrayIndex, null, "arrayIndex", 0, 1, "Array square bracket operator `[]`."),
             new MethodTest(openflVectorIndex, null, "openflVectorIndex", 0, 1, "OpenFL vector square bracket operator `[]`."),
             new MethodTest(haxeVectorIndex, null, "haxeVectorIndex", 0, 1, "Haxe vector square bracket operator `[]`."),
@@ -51,6 +50,7 @@ class IndexerTestSuite extends TestSuite {
 
         for (i in 0 ... 1000) {
             var point:Point = new Point(i, i);
+            
             array.push(point);
             openflVector.push(point);
             haxeVector.set(i, point);
@@ -65,6 +65,7 @@ class IndexerTestSuite extends TestSuite {
 
     public function baseline():Void {
         for (i in 0 ... loops) {
+            i % 1000;
         }
     }
 
@@ -73,34 +74,27 @@ class IndexerTestSuite extends TestSuite {
     //  tests
     //------------------------------
 
-    public function localReference():Void {
-        var point:Point = array[500];
-        for (i in 0 ... loops) {
-            point.x = 1;
-        }
-    }
-
     public function arrayIndex():Void {
         for (i in 0 ... loops) {
-            array[500].x = i;
+            array[i % 1000].x = i;
         }
     }
 
     public function openflVectorIndex():Void {
         for (i in 0 ... loops) {
-            openflVector[500].x = i;
+            openflVector[i % 1000].x = i;
         }
     }
 
     public function haxeVectorIndex():Void {
         for (i in 0 ... loops) {
-            haxeVector[500].x = i;
+            haxeVector[i % 1000].x = i;
         }
     }
 
     public function mapGetKey():Void {
         for (i in 0 ... loops) {
-            map[500].x = i;
+            map[i % 1000].x = i;
         }
     }
 
