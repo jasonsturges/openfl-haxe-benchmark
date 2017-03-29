@@ -24,13 +24,13 @@ class BitwiseTestSuite extends TestSuite {
         loops = 10000000;
         iterations = 4;
         tests = [
-            new MethodTest(not, null, "Bitwise Not", 0, 1, "`~` operator, negation."),
-            new MethodTest(and, null, "Bitwise And", 0, 1, "`&` operator, round to even number."),
-            new MethodTest(or, null, "Bitwise Or", 0, 1, "`|` operator, floor."),
-            new MethodTest(xor, null, "Bitwise Xor", 0, 1, "`^` operator, zero variable"),
-            new MethodTest(shiftLeft, null, "Shift Left", 0, 1, "`<<` operator, multiply by 2."),
-            new MethodTest(shiftRight, null, "Shift Right", 0, 1, "`>>` operator, divide by 2."),
-            new MethodTest(unsignedShiftRight, null, "Unsigned Shift Right", 0, 1, "`>>>` operator, rounded mean")
+            new MethodTest(not, null, "Bitwise Not `~` operator, negation"),
+            new MethodTest(and, null, "Bitwise And `&` operator, round to even number"),
+            new MethodTest(or, null, "Bitwise Or `|` operator, floor"),
+            new MethodTest(xor, null, "Bitwise Xor `^` operator, zero variable"),
+            new MethodTest(shiftLeft, null, "Shift Left `<<` operator, multiply by 2"),
+            new MethodTest(shiftRight, null, "Shift Right `>>` operator, divide by 2"),
+            new MethodTest(unsignedShiftRight, null, "Unsigned Shift Right `>>>` operator, rounded mean")
         ];
     }
 

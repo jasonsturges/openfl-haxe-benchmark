@@ -30,10 +30,10 @@ class IndexerTestSuite extends TestSuite {
         loops = 1000000;
         iterations = 4;
         tests = [
-            new MethodTest(arrayIndex, null, "arrayIndex", 0, 1, "Array square bracket operator `[]`."),
-            new MethodTest(openflVectorIndex, null, "openflVectorIndex", 0, 1, "OpenFL vector square bracket operator `[]`."),
-            new MethodTest(haxeVectorIndex, null, "haxeVectorIndex", 0, 1, "Haxe vector square bracket operator `[]`."),
-            new MethodTest(mapGetKey, null, "mapGetKey", 0, 1, "Map square bracket operator - get key.")
+            new MethodTest(arrayIndex, null, "Array square bracket operator `[]`."),
+            new MethodTest(openflVectorIndex, null, "OpenFL vector square bracket operator `[]`."),
+            new MethodTest(haxeVectorIndex, null, "Haxe vector square bracket operator `[]`."),
+            new MethodTest(mapGetKey, null, "Map square bracket operator - get key.")
         ];
     }
 
@@ -50,7 +50,7 @@ class IndexerTestSuite extends TestSuite {
 
         for (i in 0 ... 1000) {
             var point:Point = new Point(i, i);
-            
+
             array.push(point);
             openflVector.push(point);
             haxeVector.set(i, point);

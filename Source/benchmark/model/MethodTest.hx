@@ -18,11 +18,8 @@ class MethodTest extends AbstractTest {
 
     public function new(method:Dynamic,
                         ?params:Array<Dynamic>,
-                        ?name:String,
-                        iterations:UInt = 0,
-                        loops:UInt = 1,
-                        ?description:String) {
-        super(name, iterations, loops, description);
+                        ?name:String) {
+        super(name);
 
         this.method = method;
         this.params = params != null ? params : [];
@@ -33,11 +30,7 @@ class MethodTest extends AbstractTest {
 
         try {
             t = Lib.getTimer();
-
-            for (i in 0...loops) {
-                Reflect.callMethod(this, method, params);
-            }
-
+            Reflect.callMethod(this, method, params);
             t = Lib.getTimer() - t;
         } catch (error:String) {
             trace("Test failed: " + error);

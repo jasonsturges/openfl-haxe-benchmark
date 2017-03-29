@@ -29,10 +29,10 @@ class CastTestSuite extends TestSuite {
         loops = 1000000;
         iterations = 4;
         tests = [
-            new MethodTest(safeDowncast, null, "safeDowncast", 0, 1, "Safely downcast a MovieClip to a DisplayObject."),
-            new MethodTest(unsafeDowncast, null, "unsafeDowncast", 0, 1, "Downcast a MovieClip to a DisplayObject."),
-            new MethodTest(safeUpcast, null, "safeUpcast", 0, 1, "Safely upcast a DisplayObject to a MovieClip."),
-            new MethodTest(unsafeUpcast, null, "unsafeUpcast", 0, 1, "Upcast a DisplayObject to a MovieCip.")
+            new MethodTest(safeDowncast, null, "Safe downcast a MovieClip to a DisplayObject"),
+            new MethodTest(unsafeDowncast, null, "Unsafe downcast a MovieClip to a DisplayObject"),
+            new MethodTest(safeUpcast, null, "Safe upcast a DisplayObject to a MovieClip"),
+            new MethodTest(unsafeUpcast, null, "Unsafe upcast a DisplayObject to a MovieCip")
         ];
     }
 

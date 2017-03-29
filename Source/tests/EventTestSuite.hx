@@ -25,8 +25,8 @@ class EventTestSuite extends TestSuite {
         loops = 1000000;
         iterations = 4;
         tests = [
-            new MethodTest(dispatchHandled, null, "dispatchHandled", 0, 1, "Dispatch and handle an event."),
-            new MethodTest(dispatchUnhandled, null, "dispatchUnhandled", 0, 1, "Dispatch an unhandle an event.")
+            new MethodTest(dispatchHandled, null, "Dispatch and handle an event"),
+            new MethodTest(dispatchUnhandled, null, "Dispatch an unhandled an event")
         ];
     }
 

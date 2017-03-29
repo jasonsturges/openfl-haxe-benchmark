@@ -10,7 +10,6 @@ class AbstractTest extends EventDispatcher {
     //------------------------------
 
     public var name:String;
-    public var description:String;
     public var iterations:UInt;
     public var loops:UInt;
     public var average:Float;
@@ -24,13 +23,10 @@ class AbstractTest extends EventDispatcher {
     //  lifecycle
     //------------------------------
 
-    public function new(?name:String, ?iterations:UInt = 0, ?loops:UInt = 1, ?description:String) {
+    public function new(?name:String) {
         super();
 
         this.name = name;
-        this.iterations = iterations;
-        this.loops = loops;
-        this.description = description;
 
         average = -1;
         max = -1;

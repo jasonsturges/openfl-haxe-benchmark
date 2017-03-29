@@ -26,10 +26,10 @@ class LoopHoistingTestSuite extends TestSuite {
         loops = 10000;
         iterations = 4;
         tests = [
-            new MethodTest(unhoisted, null, "For Loop Unhoisted", 0, 1, "For loop unhoisted iteration."),
-            new MethodTest(hoisted, null, "For Loop Hoisted", 0, 1, "For loop hoisted iteration"),
-            new MethodTest(whileUnhoisted, null, "While Loop Unhoisted", 0, 1, "While loop unhoisted iteration."),
-            new MethodTest(whileHoisted, null, "While Loop Unhoisted", 0, 1, "While loop unhoisted iteration.")
+            new MethodTest(unhoisted, null, "For loop unhoisted"),
+            new MethodTest(hoisted, null, "For loop hoisted"),
+            new MethodTest(whileUnhoisted, null, "While loop unhoisted"),
+            new MethodTest(whileHoisted, null, "While loop unhoisted")
         ];
     }
 

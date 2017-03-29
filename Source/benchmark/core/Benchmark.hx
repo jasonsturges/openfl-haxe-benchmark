@@ -176,7 +176,7 @@ class Benchmark extends EventDispatcher {
     }
 
     public function traceTest(test:AbstractTest) {
-        trace("   Test: " + currentTest.name + " (" + currentTest.description + ")");
+        trace("   Test: " + currentTest.name);
     }
 
     public function traceTestIteration(time:Float, test:AbstractTest):Void {

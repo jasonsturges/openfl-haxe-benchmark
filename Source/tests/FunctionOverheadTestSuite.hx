@@ -24,16 +24,16 @@ class FunctionOverheadTestSuite extends TestSuite {
         loops = 10000000;
         iterations = 4;
         tests = [
-            new MethodTest(instanceFunctionTest, null, "Instance Function", 0, 1, "Call function from instance."),
-            new MethodTest(staticFunctionTest, null, "Static Function", 0, 1, "Call static function."),
-            new MethodTest(namedLocalFunctionTest, null, "Named Local Function", 0, 1, "Call named local function from inside block expression."),
-            //new MethodTest(function() { }, null, "Anonymous Local Function", 0, 1, "Call anonymous local function."),
-            new MethodTest(referenceInstanceFunctionTest, null, "Instance Function Reference", 0, 1, "Call function from instance using a reference."),
-            new MethodTest(referenceStaticFunctionTest, null, "Static Function Reference", 0, 1, "Call static function function using a reference."),
-            new MethodTest(referenceNamedLocalFunctionTest, null, "Named Local Function Reference", 0, 1, "Call local function from inside block expression using a reference."),
-            new MethodTest(referenceAnonymousFunctionTest, null, "Anonymous Local Function Reference", 0, 1, "Call local function from inside block expression using a reference."),
-            new MethodTest(reflectCallMethodInstanceTest, null, "Reflect callMethod Instance Function", 0, 1, "Call function from instance using reflection call method."),
-            new MethodTest(reflectCallMethodStaticTest, null, "Reflect callMethod Static Function", 0, 1, "Call static function using reflection call method.")
+            new MethodTest(instanceFunctionTest, null, "Instance function"),
+            new MethodTest(staticFunctionTest, null, "Static function"),
+            new MethodTest(namedLocalFunctionTest, null, "Named local function"),
+            //new MethodTest(function() { }, null, "Anonymous local function"),
+            new MethodTest(referenceInstanceFunctionTest, null, "Instance function reference"),
+            new MethodTest(referenceStaticFunctionTest, null, "Static function reference"),
+            new MethodTest(referenceNamedLocalFunctionTest, null, "Named local function reference"),
+            new MethodTest(referenceAnonymousFunctionTest, null, "Anonymous local function reference"),
+            new MethodTest(reflectCallMethodInstanceTest, null, "Reflect `callMethod()` instance function"),
+            new MethodTest(reflectCallMethodStaticTest, null, "Reflect `callMethod()` static function")
         ];
     }
 

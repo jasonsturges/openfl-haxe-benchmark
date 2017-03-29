@@ -27,8 +27,8 @@ class ConstantTestSuite extends TestSuite {
         loops = 1000000;
         iterations = 4;
         tests = [
-            new MethodTest(inlineConstant, null, "Inline constant", 0, 1, "Get static constant value as inline var"),
-            new MethodTest(readonlyConstant, null, "Readonly constant", 0, 1, "Get constant value as readonly var"),
+            new MethodTest(inlineConstant, null, "Inline static constant value"),
+            new MethodTest(readonlyConstant, null, "Readonly constant value")
         ];
     }
 

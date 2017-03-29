@@ -24,8 +24,8 @@ class FunctionInliningTestSuite extends TestSuite {
         loops = 10000000;
         iterations = 4;
         tests = [
-            new MethodTest(callMethod, null, "Call Method", 0, 1, "Call a method."),
-            new MethodTest(callMethodInline, null, "Call Method Inline", 0, 1, "Inline a method.")
+            new MethodTest(callMethod, null, "Call a method"),
+            new MethodTest(callMethodInline, null, "Inline a method")
         ];
     }
 

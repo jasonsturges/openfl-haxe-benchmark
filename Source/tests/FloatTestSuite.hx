@@ -24,11 +24,11 @@ class FloatTestSuite extends TestSuite {
         loops = 10000000;
         iterations = 4;
         tests = [
-            new MethodTest(addition, null, "addition", 0, 1, "addition, `+` operator"),
-            new MethodTest(subtraction, null, "subtraction", 0, 1, "subtraction, `-` operator"),
-            new MethodTest(division, null, "division", 0, 1, "division, `/` operator"),
-            new MethodTest(multiplication, null, "multiplication", 0, 1, "multiplication, `*` operator"),
-            new MethodTest(modulo, null, "modulo", 0, 1, "modulo, `%` operator")
+            new MethodTest(addition, null, "Addition `+` operator"),
+            new MethodTest(subtraction, null, "Subtraction `-` operator"),
+            new MethodTest(division, null, "Division `/` operator"),
+            new MethodTest(multiplication, null, "Multiplication `*` operator"),
+            new MethodTest(modulo, null, "Modulo, `%` operator")
         ];
     }
 

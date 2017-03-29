@@ -31,11 +31,11 @@ class CollectionTestSuite extends TestSuite {
         loops = 10000;
         iterations = 4;
         tests = [
-            new MethodTest(arrayPush, null, "Array Push", 0, 1, "Push an item to an array"),
-            new MethodTest(vectorSet, null, "Vector Set", 0, 1, "Push an item to an array"),
-            new MethodTest(listAdd, null, "List Add", 0, 1, "Push an item to an array"),
-            new MethodTest(genericStackAdd, null, "Generic Stack Add", 0, 1, "Push an item to an array"),
-            new MethodTest(mapSet, null, "Map Set", 0, 1, "Push an item to an array")
+            new MethodTest(arrayPush, null, "Array push an item"),
+            new MethodTest(vectorSet, null, "Vector set an item"),
+            new MethodTest(listAdd, null, "List add an item"),
+            new MethodTest(genericStackAdd, null, "Generic stack add an item"),
+            new MethodTest(mapSet, null, "Map set an item")
         ];
     }
 

@@ -34,15 +34,14 @@ class InstantiationTestSuite extends TestSuite {
         loops = 1000000;
         iterations = 4;
         tests = [
-            new MethodTest(newPoint, null, "newPoint", 0, 1, "Instantiate a new Point."),
-            new MethodTest(newRectangle, null, "newRectangle", 0, 1, "Instantiate a new Rectangle."),
-            new MethodTest(newMatrix, null, "newMatrix", 0, 1, "Instantiate a new Matrix."),
-            new MethodTest(newMatrix3D, null, "newMatrix3D", 0, 1, "Instantiate a new Matrix3D."),
-            new MethodTest(newShape, null, "newShape", 0, 1, "Instantiate a new Shape."),
-            new MethodTest(newSprite, null, "newSprite", 0, 1, "Instantiate a new Sprite."),
-            new MethodTest(newMovieClip, null, "newMovieClip", 0, 1, "Instantiate a new MovieClip."),
-            new MethodTest(newBitmap, null, "newBitmap", 0, 1, "Instantiate a new Bitmap."),
-            new MethodTest(newBitmapData, null, "newBitmapData", 0, 1, "Instantiate a new 64x64 BitmapData.")
+            new MethodTest(newPoint, null, "New Point"),
+            new MethodTest(newRectangle, null, "New Rectangle"),
+            new MethodTest(newMatrix, null, "New Matrix"),
+            new MethodTest(newMatrix3D, null, "New Matrix3D"),
+            new MethodTest(newShape, null, "New Shape"),
+            new MethodTest(newSprite, null, "New Sprite"),
+            new MethodTest(newMovieClip, null, "New MovieClip"),
+            new MethodTest(newBitmap, null, "New Bitmap")
         ];
     }
 
@@ -114,12 +113,6 @@ class InstantiationTestSuite extends TestSuite {
     public function newBitmap():Void {
         for (i in 0 ... loops) {
             new Bitmap();
-        }
-    }
-
-    public function newBitmapData():Void {
-        for (i in 0 ... loops) {
-            new BitmapData(64, 64);
         }
     }
 

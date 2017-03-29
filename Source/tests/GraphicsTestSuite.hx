@@ -32,9 +32,9 @@ class GraphicsTestSuite extends TestSuite {
         loops = 100000;
         iterations = 4;
         tests = [
-            new MethodTest(lineTo, null, "Draw Line", 0, 1, "Draw line calling `shape.graphics.lineTo`."),
-            new MethodTest(lineToReference, null, "Draw Line with Reference", 0, 1, "Draw lineTo using local graphics reference."),
-            new MethodTest(drawPath, null, "Draw Path", 0, 1, "Draw line using single `drawPath` call with precomputed commands and data.")
+            new MethodTest(lineTo, null, "Draw line calling `shape.graphics.lineTo`"),
+            new MethodTest(lineToReference, null, "Draw line using local graphics reference"),
+            new MethodTest(drawPath, null, "Draw path using single `drawPath` call with precomputed commands")
         ];
     }
 

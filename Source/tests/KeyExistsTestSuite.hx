@@ -27,9 +27,9 @@ class KeyExistsTestSuite extends TestSuite {
         loops = 10000;
         iterations = 4;
         tests = [
-            new MethodTest(exists, null, "exists", 0, 1, "Use `exists()` function to verify key."),
-            new MethodTest(squareBracket, null, "squareBracket", 0, 1, "Use square bracket operator `[]` and test for null to verify key."),
-            new MethodTest(lambaHas, null, "lambaHas", 0, 1, "Use `Lamba.has()` to verify key.")
+            new MethodTest(exists, null, "Use `exists()` function to verify key"),
+            new MethodTest(squareBracket, null, "Use square bracket operator `[]` array index and test for null to verify key"),
+            new MethodTest(lambaHas, null, "Use `Lamba.has()` to verify key")
         ];
     }
 

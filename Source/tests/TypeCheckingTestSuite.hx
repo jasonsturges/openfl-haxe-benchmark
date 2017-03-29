@@ -36,8 +36,8 @@ class TypeCheckingTestSuite extends TestSuite {
         loops = 100000;
         iterations = 4;
         tests = [
-            new MethodTest(isTest, null, "Std.Is", 0, 1, "Using `Std.is` test."),
-            new MethodTest(getClassTest, null, "Type.getClass", 0, 1, "Using `Type.getClass()` test.")
+            new MethodTest(isTest, null, "Using `Std.Is()`"),
+            new MethodTest(getClassTest, null, "Using `Type.getClass()`")
         ];
     }
 

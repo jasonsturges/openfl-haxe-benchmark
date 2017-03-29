@@ -27,10 +27,10 @@ class MapTestSuite extends TestSuite {
         loops = 1000000;
         iterations = 4;
         tests = [
-            new MethodTest(mapGet, null, "Map Get", 0, 1, "Map using `get()`."),
-            new MethodTest(mapBracket, null, "Map Bracket", 0, 1, "Map using square brackets operator."),
-            new MethodTest(objectDotNotation, null, "Object Dot Notation", 0, 1, "Object using dot notation."),
-            new MethodTest(objectReflect, null, "Object Reflect", 0, 1, "Object using reflection.")
+            new MethodTest(mapGet, null, "Map using `get()`"),
+            new MethodTest(mapBracket, null, "Map using square brackets operator"),
+            new MethodTest(objectDotNotation, null, "Object using dot notation"),
+            new MethodTest(objectReflect, null, "Object using reflection")
         ];
     }
 

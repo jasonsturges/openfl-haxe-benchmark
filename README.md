@@ -84,11 +84,11 @@ For example, calculate how much overhead it takes to execute a `for` loop:
 
 ##### Add Tests to Test Suites
 
-To add tests to your test suite, add a subclass of `AbstractTest` to your `tests` array of your test suite.  For example, to call a method on your test suite, use  `MethodTest`:
+To add tests to your test suite, add a subclass of `AbstractTest` to your `tests` array of your test suite.  For example, to call a method on your test suite, use `MethodTest`:
 
         tests = [
-            new MethodTest(test1, null, "Test Function 1", 0, 1, "Execute function `test1` from this class"),
-            new MethodTest(test2, null, "Test Function 2", 0, 1, "Execute function `test2` from this class")
+            new MethodTest(test1, null, "Execute function `test1()` from this class"),
+            new MethodTest(test2, null, "Execute function `test2()` from this class")
         ];
 
 Above, two tests are defined that will call `test1()` and `test2()` functions on the test suite.
@@ -139,8 +139,8 @@ Likewise, exactly the same thing will happen for the second test defined: "Test 
             loops = 10000000;
             iterations = 4;
                 tests = [
-                    new MethodTest(test1, null, "Test Function 1", 0, 1, "Execute function `test1` from this class"),
-                    new MethodTest(test2, null, "Test Function 2", 0, 1, "Execute function `test2` from this class")
+                    new MethodTest(test1, null, "Execute function `test1()` from this class"),
+                    new MethodTest(test2, null, "Execute function `test2()` from this class")
                 ];
         }
 

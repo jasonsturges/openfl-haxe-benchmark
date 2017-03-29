@@ -24,11 +24,11 @@ class LoopTestSuite extends TestSuite {
         loops = 10000;
         iterations = 4;
         tests = [
-            new MethodTest(forIncrement, null, "For Increment", 0, 1, "For loop incremental iteration."),
-            new MethodTest(whileIncrement, null, "While Increment", 0, 1, "While loop incremental iteration."),
-            new MethodTest(whileDecrement, null, "While Decrement", 0, 1, "While loop decremental iteration."),
-            new MethodTest(doWhileIncrement, null, "Do While Increment", 0, 1, "Do while loop incremental iteration."),
-            new MethodTest(doWhileDecrement, null, "Do While Decrement", 0, 1, "Do while loop decremental iteration.")
+            new MethodTest(forIncrement, null, "For increment"),
+            new MethodTest(whileIncrement, null, "While increment"),
+            new MethodTest(whileDecrement, null, "While decrement"),
+            new MethodTest(doWhileIncrement, null, "Do while increment"),
+            new MethodTest(doWhileDecrement, null, "Do while decrement")
         ];
     }
 
