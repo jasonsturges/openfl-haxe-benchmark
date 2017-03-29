@@ -35,10 +35,6 @@ class Benchmark extends EventDispatcher {
         synchronous = false;
         index = iteration = 0;
         state = TestState.IDLE;
-
-        timer = new Timer(50, 1);
-        timer.addEventListener(TimerEvent.TIMER, timerHandler);
-
     }
 
     public function enqueueTestSuite(testSuite:TestSuite):Void {
@@ -58,6 +54,10 @@ class Benchmark extends EventDispatcher {
 
     public function runAsynchronous():Void {
         synchronous = false;
+
+        timer = new Timer(50, 1);
+        timer.addEventListener(TimerEvent.TIMER, timerHandler);
+
         next();
     }
 
