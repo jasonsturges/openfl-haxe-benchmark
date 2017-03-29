@@ -90,6 +90,7 @@ class FunctionOverheadTestSuite extends TestSuite {
 
     public function referenceInstanceFunctionTest():Void {
         var fn:Dynamic = instanceFunction;
+        
         for (i in 0 ... loops) {
             fn();
         }
@@ -97,6 +98,7 @@ class FunctionOverheadTestSuite extends TestSuite {
 
     public function referenceStaticFunctionTest():Void {
         var fn:Dynamic = FunctionOverheadTestSuite.staticFunction;
+
         for (i in 0 ... loops) {
             fn();
         }
