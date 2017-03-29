@@ -181,7 +181,7 @@ class Benchmark extends EventDispatcher {
         trace("      Result: " + t + " ms per operation / " + (1.0 / t) + " operations per ms");
 
         if (t < 0) {
-            trace("      ERROR: Baseline faster than test case!");
+            trace("      ERROR: Test faster than baseline");
         }
     }
 
