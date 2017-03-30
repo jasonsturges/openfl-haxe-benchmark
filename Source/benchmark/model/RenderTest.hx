@@ -33,7 +33,7 @@ class RenderTest extends AbstractTest {
         this.bounds = bounds;
     }
 
-    override public function run():Int {
+    override public function run():UInt {
         var rect:Rectangle = bounds != null ? bounds : displayObject.getBounds(displayObject);
         if (bitmapData == null || bitmapData.width != Math.ceil(rect.width) || bitmapData.height != Math.ceil(rect.height)) {
             try {
