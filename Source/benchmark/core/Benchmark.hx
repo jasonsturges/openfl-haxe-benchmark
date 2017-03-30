@@ -10,6 +10,12 @@ import benchmark.model.TestSuite;
 
 class Benchmark extends EventDispatcher {
 
+#if cpp
+    @:native("__hxcpp_set_float_format") @:extern
+    static function setFloatFormat(format:String):Void { }
+#end
+
+
     //------------------------------
     //  model
     //------------------------------
@@ -152,7 +158,7 @@ class Benchmark extends EventDispatcher {
         }
         iteration++;
 
-        var t:Float = test.run();
+        var t:Int = test.run();
         traceTestIteration(t, test);
 
         var completed:Bool = (t < 0 || iteration >= currentTest.iterations);
@@ -179,7 +185,9 @@ class Benchmark extends EventDispatcher {
         trace("   Test: " + currentTest.name);
     }
 
-    public function traceTestIteration(time:Float, test:AbstractTest):Void {
+    public function traceTestIteration(time:Int, test:AbstractTest):Void {
+        #if cpp setFloatFormat("%.3f"); #end
+
         trace("      time: " + time +
         ", min: " + test.min +
         ", max: " + test.max +
@@ -188,8 +196,10 @@ class Benchmark extends EventDispatcher {
     }
 
     public function traceTestResult(test:AbstractTest, testSuite:TestSuite):Void {
+        #if cpp setFloatFormat("%.8f"); #end
+
         var t:Float = ((test.average - testSuite.baselineTime) / testSuite.loops);
-        trace("      Result: " + t + " ms per operation / " + (1.0 / t) + " operations per ms");
+        trace("      Result: " + toFixed(t, 6) + " ms per operation / " + (1.0 / t) + " operations per ms");
 
         if (t < 0) {
             trace("      ERROR: Test faster than baseline");

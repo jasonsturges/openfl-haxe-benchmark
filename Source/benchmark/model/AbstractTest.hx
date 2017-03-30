@@ -14,9 +14,9 @@ class AbstractTest extends EventDispatcher {
     public var loops:UInt;
     public var average:Float;
     public var deviation:Float;
-    public var max:Float;
-    public var min:Float;
-    public var timeLog:Array<Float>;
+    public var max:Int;
+    public var min:Int;
+    public var timeLog:Array<Int>;
 
 
     //------------------------------
@@ -36,7 +36,7 @@ class AbstractTest extends EventDispatcher {
         timeLog = [];
     }
 
-    public function run():Float {
+    public function run():Int {
         return -1;
     }
 
@@ -44,7 +44,7 @@ class AbstractTest extends EventDispatcher {
         dispatchEvent(new TestEvent(TestEvent.COMPLETE));
     }
 
-    private function logIteration(time:Float):Void {
+    private function logIteration(time:Int):Void {
         timeLog.push(time);
         if (min == -1 || time < min)
             min = time;

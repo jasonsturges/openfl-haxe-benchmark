@@ -25,8 +25,8 @@ class MethodTest extends AbstractTest {
         this.params = params != null ? params : [];
     }
 
-    override public function run():Float {
-        var t:Float = -1;
+    override public function run():Int {
+        var t:Int = -1;
 
         try {
             t = Lib.getTimer();
