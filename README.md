@@ -138,10 +138,10 @@ Likewise, exactly the same thing will happen for the second test defined: "Test 
             baselineTest = new MethodTest(baseline);
             loops = 10000000;
             iterations = 4;
-                tests = [
-                    new MethodTest(test1, null, "Execute function `test1()` from this class"),
-                    new MethodTest(test2, null, "Execute function `test2()` from this class")
-                ];
+            tests = [
+                new MethodTest(test1, null, "Execute function `test1()` from this class"),
+                new MethodTest(test2, null, "Execute function `test2()` from this class")
+            ];
         }
 
         // add additional utility methods if needed
