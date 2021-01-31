@@ -3,7 +3,7 @@ OpenFL Haxe Benchmark
 
 Modeled after [Grant Skinner's](http://gskinner.com/blog) ActionScript project [PerformanceTest](http://gskinner.com/blog/archives/2010/02/performancetest.html), this variation is designed for [OpenFL](http://www.openfl.org/) to benchmark segments of [Haxe](https://haxe.org/) code.
 
-![instantiation](http://labs.jasonsturges.com/openfl/openfl-haxe-benchmark/object-instantiation.png)
+![object-instantiation](https://user-images.githubusercontent.com/1213591/106400141-5d0fb000-63e2-11eb-9410-7605f9ff43b4.png)
 
 Executing a batch of tests every 50-milliseconds on a Timer, each iteration runs a defined number of loops for multiple samples.  Overhead baseline is removed from the result, and deviation of each iteration is denoted.
 
